@@ -15,9 +15,6 @@ module.exports = {
         "75%": "75%",
         "100%": "100%",
       },
-      margin: {
-        "100": "-100px",
-      },
     },
   },
   plugins: [require("flowbite/plugin")],

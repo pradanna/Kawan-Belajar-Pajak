@@ -1,4 +1,5 @@
 $primary-color: #1c5e8e;
+$primary-secondary: #f9c50d;
 $primary-colord1: rgb(173, 0, 0);
 $primary-colorl1: #1c5e8e77;
 $primary-colorl2: #d5eeff77;
@@ -13,6 +14,10 @@ html {
   background-color: $primary-color;
 }
 
+.bg-secondary {
+  background-color: $primary-secondary;
+}
+
 .bg-primarylight {
   background-color: $primary-colorl1;
 }
@@ -24,8 +29,13 @@ html {
 .text-primary {
   color: $primary-color;
 }
+
+.text-secondary {
+  color: $primary-secondary;
+}
+
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   background-color: $background-color;
 }
 
@@ -112,9 +122,9 @@ a.anchor {
   }
 }
 
-.portfolio {
+.history {
   background-color: white;
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
 
   .card {

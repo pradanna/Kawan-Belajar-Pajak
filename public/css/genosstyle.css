@@ -6,6 +6,10 @@ html {
   background-color: #1c5e8e;
 }
 
+.bg-secondary {
+  background-color: #f9c50d;
+}
+
 .bg-primarylight {
   background-color: rgba(28, 94, 142, 0.4666666667);
 }
@@ -18,8 +22,12 @@ html {
   color: #1c5e8e;
 }
 
+.text-secondary {
+  color: #f9c50d;
+}
+
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   background-color: #f5f5f7;
 }
 
@@ -86,12 +94,12 @@ a.anchor {
   padding: 2rem;
 }
 
-.portfolio {
+.history {
   background-color: white;
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
 }
-.portfolio .card {
+.history .card {
   box-shadow: 5px 5px 20px 1px #eee;
   border-radius: 10px;
   background-color: white;

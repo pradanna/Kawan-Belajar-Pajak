@@ -18,8 +18,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
 
 
@@ -80,7 +83,7 @@
         <section class="hero bg-white " id="beranda">
             {{-- Headline --}}
             <div class="absolute md:left-20 md:top-1/3 md:w-1/3 top-36 left-5 right-5 z-10">
-                <p class="md:text-5xl text-xl font-medium leading-snug" data-aos="fade-right" data-aos-duration="300">
+                <p class="md:text-5xl text-xl font-bold leading-snug" data-aos="fade-right" data-aos-duration="300">
                     ENJOY BELAJAR AKUNTANSI DAN PAJAK
                 </p>
                 <p class="mt-4" data-aos="fade-right" data-aos-duration="400">We Are Your Friends and You are My
@@ -94,7 +97,7 @@
                 src="{{ asset('assets/images/background.png') }}" />
             <img class="absolute left-0 bottom-0 h-100% sm:block hidden"
                 src="{{ asset('assets/images/background2.png') }}" />
-            <div class="absolute right-5 bottom-0 h-75%">
+            <div class="absolute right-32 bottom-0 h-75%">
                 <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/heroimage.png') }}" />
 
                 <img class="absolute object-contain  md:block hidden  acc1"
@@ -109,11 +112,11 @@
         </section>
 
         {{-- KENAPA --}}
-        <section class="container relative mt-100 bg-white shadow-md mx-auto rounded-2xl p-10 z-20"
+        <section class="container relative mt-100 bg-white shadow-md mx-auto rounded-2xl p-10 z-10"
             style="margin-top: -50px">
             <p class="text-center md:text-4xl text-2xl font-bold mb-16"> Kenapa harus belajar akuntansi / <br> pajak
                 bersama
-                <span class="text-primary "> kawan
+                <span class="text-secondary "> kawan
                     pajak? </span>
             </p>
             <div class="grid sm:grid-cols-3 grid-cols-1 gap-5 lg:gap-10 xl:gap-16 2xl:gap-52">
@@ -168,9 +171,9 @@
 
 
 
-        <section class="ourservice ">
+        <section class="ourservice my-60">
             <p class="text-center md:text-4xl text-2xl font-bold mb-10"> Pilih
-                <span class="text-primary "> Kelas </span>
+                <span class="text-secondary "> Kelas </span>
             </p>
 
             <div class="container  grid 2xl:grid-cols-5 md:grid-cols-3 grid-cols-1 p-5 gap-10 mx-auto">
@@ -227,228 +230,193 @@
         </section>
 
         {{-- RIWAYAT --}}
-        <section class="riwayat">
+        <section class="riwayat "
+            style="background-image: url({{ asset('assets/images/riwayatbackground.jpg') }}); background-size: cover; ">
             <p class="text-center md:text-4xl text-2xl font-bold mb-10"> Riwayat Peserta <br>
-                <span class="text-primary "> Kawan Belajar Pajak </span>
+                <span class="text-black "> Kawan Belajar Pajak </span>
             </p>
+
+            <section class="splide sm:p-0 p-5" aria-label="Slide Container Example">
+                <div class="splide__track container mx-auto p-5">
+                    <ul class="splide__list ">
+                        <li class="splide__slide">
+                            <div class="splide__slide__container ">
+                                <div class="shadow-lg p-5 min-h-52 bg-white rounded-lg ">
+                                    <div class="flex justify-between pb-2">
+                                        <div class=" flex-grow">
+                                            <p class="font-bold">Nur Imaki</p>
+                                            <p class="bg-primary text-white px-1 rounded-sm inline">Nusa Tenggara Barat
+                                            </p>
+                                            <p>Kepala ITB</p>
+                                        </div>
+                                        <div
+                                            class="flex justify-center items-center overflow-hidden relative w-20 h-20 rounded-full">
+                                            <img src="https://akcdn.detik.net.id/visual/2022/12/14/kiri-avatar-the-way-of-water_169.png?w=650"
+                                                class="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
+
+
+                                    <hr>
+
+                                    <p class="text-xs text-gray-700 p-3">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container">
+                                <div class="shadow-lg p-5 min-h-52 bg-white rounded-lg ">
+                                    <div class="flex justify-between pb-2">
+                                        <div class=" flex-grow">
+                                            <p class="font-bold">Nur Imaki</p>
+                                            <p class="bg-primary text-white px-1 rounded-sm inline">Nusa Tenggara Barat
+                                            </p>
+                                            <p>Kepala ITB</p>
+                                        </div>
+                                        <div
+                                            class="flex justify-center items-center overflow-hidden relative w-20 h-20 rounded-full">
+                                            <img src="https://akcdn.detik.net.id/visual/2022/12/14/kiri-avatar-the-way-of-water_169.png?w=650"
+                                                class="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
+
+
+                                    <hr>
+
+                                    <p class="text-xs text-gray-700 p-3">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
         </section>
 
 
-        <section class="purpose container max-w-6xl md:mt-36 mt-10 mx-auto ">
-            <div class="card md:mx-auto mx-5" data-aos="fade-up" data-aos-duration="300">
-                <p class="md:text-4xl text-xl text-center text-white">Tujuan Kami adalah membuat website atau aplikasi
-                    impianmu
-                    menjadi nyata dan membuat usahamu berkembang</p>
+        <section class="purpose container max-w-6xl md:mt-16 mt-10 mx-auto ">
+            <div data-aos="fade-up" data-aos-duration="500">
+                <div class="flex justify-center items-center ">
+                    <p class="md:text-4xl text-2xl font-medium text-center mb-10">Cara Gampang <span
+                            class="text-secondary">Bergabung</span> </p>
+                </div>
             </div>
-        </section>
+            <div data-aos="fade-up" data-aos-duration="500">
+                <div class="grid grid-cols-5 mb-20">
+                    <div>
+                        <div class="flex mb-3 justify-center">
+                            <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
+                                <img src="{{ asset('assets/images/avatar.png') }}" class="h-16" />
+                            </a>
 
-        <a class="anchor" id="portfolio"></a>
-        <section class="portfolio mt-36 ">
-            <div class="mx-auto container">
+                        </div>
+                        <p class="text-center font-bold text-xl ">Hubungi Admin
+                        </p>
+                    </div>
+                    <hr class="my-auto border-yellow-300 border-2">
+
+                    <div>
+                        <div class="flex mb-3 justify-center">
+                            <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
+                                <img src="{{ asset('assets/images/process.png') }}" class="h-16" />
+                            </a>
+
+                        </div>
+                        <p class="text-center font-bold text-xl ">Ikuti Langkahnya
+                        </p>
+
+                    </div>
+                    <hr class="my-auto border-yellow-300 border-2">
+                    <div>
+                        <div class="flex mb-3 justify-center">
+                            <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
+                                <img src="{{ asset('assets/images/fan-club.png') }}" class="h-16" />
+                            </a>
+
+                        </div>
+                        <p class="text-center font-bold text-xl ">Masuk kedalam grup dan Kelas dimulai
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container bg-white shadow-lg p-10 rounded-lg mb-10">
+                <div class="flex justify-center items-center ">
+                    <p class="md:text-4xl text-2xl font-bold text-center mb-10">Ketika udah bergabung dengan <span
+                            class="text-primary">KBP</span> Kamu Bakal</p>
+
+                </div>
                 <div>
-                    <p class="text-2xl md:text-4xl text-center md:mx-0 mx-5" data-aos="fade-up"
-                        data-aos-duration="300"><span class="text-red-500">Project </span> yang Telah Kami Buat
+                    <p class="md:text-2xl text-2xl font-medium text-gray-700 ">1. Terbuka tentang ilmu Pajak dan
+                        Akuntansi</p>
+                    <p class="md:text-2xl text-2xl font-medium  text-gray-700">2. Lebih Percaya Diri</p>
+                    <p class="md:text-2xl text-2xl font-medium  text-gray-700">3. Produktif</p>
+                    <p class="md:text-2xl text-2xl font-medium text-gray-700">4. Kompeten Pada -------------
                     </p>
                 </div>
-
-                <div class="grid md:grid-cols-3 grid-cols-1 gap-10 mt-10 mx-5 md:mx-0">
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/sukmatrip.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Sukmatrip.com</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Sukmatrip adalah perusahaan
-                                jasa yang dikhususkan untuk perjalanan bulan madu serta perjalanan romantis lainnya.
-                                Kami hadir sejak tahun 2019 </p>
-
-                        </div>
-                    </div>
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/omahgue.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Omah Gue</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">OmahGue hadir untuk anda yang
-                                memiliki mobilitas tinggi agar tetap betah dimanapun anda berada, mencari tempat
-                                menginap, tempat usaha dan tempat kerja lebih mudah dan murah. </p>
-
-                        </div>
-                    </div>
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/solopos.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Solopos</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Aplikasi berita terupdate,
-                                dengan beberapa kategori yang disediakan sehingga mencari berita menjadi lebih mudah.
-                            </p>
-
-                        </div>
-                    </div>
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/fasya.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Fakultas Syariah </h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Web Profile Fakultas Syariah
-                                Raden Mas Said Surakarta, dengan fitur share materi oleh dosen atau admin, sehingga
-                                mahasiswa dapat memperoleh materi secara berkala melalui website ini. </p>
-
-                        </div>
-                    </div>
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/kiwi.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Are You Smartest Kiwi</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Sebuah Aplikasi trivia dari
-                                New Zeland, dilengkapi dengan admin panel untuk menambah soal trivia dan dilengkapi juga
-                                sistem score, sehingga lebih competitive</p>
-
-                        </div>
-                    </div>
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/rsx.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Raja Sulaiman Express</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Web Profile perusahaan jasa
-                                pengiriman barang yang dilengkapi dengan fitur cek resi yang sederhana dan mudah
-                                pemakaianya. </p>
-
-                        </div>
-                    </div>
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/temanbelajar.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Teman Belajar</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Website dan aplikasi start up
-                                di Surakarta yang mempertemukan penyedia jasa kursus dan siswa yang ingin belajar mata
-                                pelajaran tertentu atau Skill tertentu. Terdapat fitur Offline dan Online. </p>
-
-                        </div>
-                    </div>
-
-                    <div class=" bg-white border border-gray-200 rounded-lg shadow-sm " data-aos="fade-up"
-                        data-aos-duration="300">
-                        <a>
-                            <img class="rounded-t-lg h-72 object-cover w-full" src="assets/images/yousee.jpg"
-                                alt="" />
-                        </a>
-                        <div class="p-5">
-                            <a>
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Yousee Indonesia</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Website internal yang
-                                berfungsi untuk melakukan pencatatan lokasi titik baliho yang akan ditampilkan langsung
-                                melalui google maps.</p>
-
-                        </div>
-                    </div>
-
-
-                </div>
-
             </div>
         </section>
 
-        <a class="anchor" id="client"></a>
-        <section class="client">
-            <div class="mx-auto container">
-                <div>
-                    <p class="text-4xl text-center" data-aos="fade-up" data-aos-duration="300"><span
-                            class="text-red-500">Klien </span> Kami
-                    </p>
+        {{-- <section class="history mt-52">
+            <div data-aos="fade-up" data-aos-duration="500"
+                class="container mx-auto relative flex gap-10 items-start">
+                <div class="" style="margin-top: -100px">
+                    <div class="w-52 h-52 overflow-hidden">
+                        <img src="{{ asset('assets/images/history.jpg') }}" class="w-56 object-scale-down" />
+                    </div>
                 </div>
-
-                <div class="flex flex-wrap mt-16 gap-24 justify-center items-center">
-                    <img class="imagelogo h-12" src="{{ asset('assets/images/sukmatriplogo.png') }}"
-                        data-aos="fade-up" data-aos-duration="300" />
-                    <img class="imagelogo h-20" src="{{ asset('assets/images/fasyalogo.png') }}" data-aos="fade-up"
-                        data-aos-duration="400" />
-                    <img class="imagelogo h-20" src="{{ asset('assets/images/omahguelogo.png') }}"
-                        data-aos="fade-up" data-aos-duration="500" />
-                    <img class="imagelogo h-20" src="{{ asset('assets/images/psglogo.png') }}" data-aos="fade-up"
-                        data-aos-duration="600" />
-                    <img class="imagelogo h-16" src="{{ asset('assets/images/rsxlogo.png') }}" data-aos="fade-up"
-                        data-aos-duration="700" />
-                    <img class="imagelogo h-8" src="{{ asset('assets/images/soloposlogo.png') }}" data-aos="fade-up"
-                        data-aos-duration="800" />
-                    <img class="imagelogo h-14" src="{{ asset('assets/images/temanbelajarlogo.png') }}"
-                        data-aos="fade-up" data-aos-duration="900" />
-                    <img class="imagelogo  h-16" src="{{ asset('assets/images/youseelogo.png') }}"
-                        data-aos="fade-up" data-aos-duration="1000" />
+                <div class="flex flex-col justify-start ">
+                    <p class="md:text-4xl text-2xl font-medium  mb-2">Sejarah <span class="text-secondary">KBP</span>
+                        dan Tujuan </p>
+                    <p class="text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.</p>
                 </div>
             </div>
-        </section>
+        </section> --}}
+
+
 
         <a class="anchor" id="contact"></a>
-        <section class="kontak">
+        <section class="kontak" class="mt-10">
 
             <div class="mx-auto container">
 
                 <div class="">
                     <div class="info">
                         <p class="text-4xl text-center" data-aos="fade-up" data-aos-duration="300"><span
-                                class="text-red-500">Kontak </span> Kami
+                                class="text-secondary">Kontak </span> Kami
                         </p>
                         <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600" data-aos="fade-up"
                             data-aos-duration="300">Office</p>
                         <a class="text-center link font-bold text-lg block" data-aos="fade-up"
-                            data-aos-duration="300" href="https://goo.gl/maps/74mbortfrDm1H2a68" target="_blank">Jl.
-                            Ontorejo no: 8 Serengan
-                            Serengan
+                            data-aos-duration="300" href="https://goo.gl/maps/HKvAqTnJS7nkijZ9A"
+                            target="_blank">Jayengan Kidul RT 003 RW 008 Jayengan Serengan
                             Surakarta
                         </a>
 
@@ -456,7 +424,8 @@
                             <div>
                                 <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Instagram</p>
                                 <a class="text-center link font-bold block text-lg"
-                                    href="https://www.instagram.com/genossys/" target="_blank">@genossys
+                                    href="https://www.instagram.com/kawanbelajarpajak/?hl=cs"
+                                    target="_blank">@temanbelajarakuntansi
                                 </a>
                             </div>
                             <div>
@@ -468,7 +437,7 @@
                             <div>
                                 <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Facebook</p>
                                 <a class="text-center link font-bold block text-lg"
-                                    href="https://www.facebook.com/genossys" target="_blank">Genossys
+                                    href="https://www.facebook.com/pembelajaranpajak/" target="_blank">KBP Facebook
                                 </a>
                             </div>
                         </div>
@@ -476,40 +445,30 @@
                 </div>
             </div>
         </section>
+
         <footer class="footer  ">
             <div class="container grid md:grid-cols-4 grid-cols-1 gap-10 md:mx-auto md:px-0 px-5">
                 <div class="md:col-span-2">
 
                     <p class="title ">Sejarah Singkat</p>
-                    <p class="content text-sm">Genossys didirikan pada tahun 2019 di Kota Surakarta sebagai perusahaan
-                        pengembangan perangkat lunak. Perusahaan ini didirikan oleh Pradana Mahendra, Bagus Yanuar,
-                        Taufiq
-                        Muhajir dan Erfin Aditya, yang merupakan teman-teman kuliah di salah satu Universitas di
-                        Surakarta
-                        yang
-                        memiliki pengalaman luas dalam bidang teknologi informasi. <br><br>
-
-                        Pada awalnya, perusahaan ini hanya untuk mengerjakan pekerjaan sampingan dan hanya membuat
-                        project-project kecil saja, tapi seiring berjalanya waktu project yang dikerjakan mulai besar
-                        dan
-                        harus
-                        dikerjakan dengan serius, jadi kami memutuskan untuk keluar dari pekerjaan utama dan serius
-                        untuk
-                        membuat Genossys menjadi besar. <br><br>
-
-                        Dalam beberapa tahun terakhir, Genossys telah menjadi mengerjakan project-project dengan skala
-                        besar
-                        dan
-                        komplek. Genossys terus berkembang dan mengikuti perkembangan teknologi informasi, dan
-                        berkomitmen untuk memberikan solusi perangkat lunak terbaik dan terbaru kepada pelanggan.</p>
+                    <p class="content text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.
+                        Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.</p>
                 </div>
                 <div>
                     <p class="title">Menu</p>
                     <a class="link" href="#beranda">Beranda</a>
-                    <a class="link" href="#layanan">Layanan Kami</a>
-                    <a class="link" href="#portfolio">PortFolio</a>
-                    <a class="link" href="#client">Klien Kami</a>
-                    <a class="link" href="#contact">Kontak Kami</a>
+                    <a class="link" href="#layanan">Pendidikan</a>
+                    <a class="link" href="#portfolio">Berita</a>
+                    <a class="link" href="#client">Testimoni</a>
+                    <a class="link" href="#contact">Blog</a>
+                    <a class="link" href="#contact">kontak</a>
 
                     <p class="title mt-10">Media Sosial</p>
                     <a><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="iconsocial"
@@ -534,7 +493,7 @@
 
                 </div>
                 <div>
-                    <img src="{{ asset('assets/icons/genossys2.svg') }}" />
+                    <img src="{{ asset('assets/icons/logo1.png') }}" />
                     <p class="title mt-10">Credit</p>
                     <a class="py-2 px-4  hover:bg-black bg-gray-700 text-white rounded-2xl cursor-pointer transition-all duration-300"
                         data-modal-target="kreditModal" data-modal-toggle="kreditModal">Image Source </a>
@@ -584,17 +543,50 @@
                         title="money icons">Money icons created by Kiranshastry - Flaticon</a>
                     <a class="block link" target="_blank" href="https://www.flaticon.com/free-icons/professional"
                         title="professional icons">Professional icons created by Parzival’ 1997 - Flaticon</a>
-                    <a href="https://www.flaticon.com/free-icons/campus" title="campus icons">Campus icons created by
+                    <a class="block link" target="_blank" href="https://www.flaticon.com/free-icons/campus"
+                        title="campus icons">Campus icons created by
                         SyafriStudio - Flaticon</a>
+                    <a class="block link" target="_blank"
+                        href="https://www.freepik.com/free-vector/yellow-background-with-circular-shapes_25138673.htm#query=blue%20yellow&position=25&from_view=keyword&track=ais">Image
+                        by starline</a> on Freepik
+                    <a href="https://www.flaticon.com/free-icons/contact" title="contact icons">Contact icons created
+                        by Vector Stall - Flaticon</a>
+                    <a href="https://www.flaticon.com/free-icons/process" title="process icons">Process icons created
+                        by Becris - Flaticon</a>
+                    <a href="https://www.flaticon.com/free-icons/fan-club" title="fan club icons">Fan club icons
+                        created by noomtah - Flaticon</a>
+                    Photo by <a
+                        href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly
+                        Sikkema</a> on <a
+                        href="https://unsplash.com/photos/SiOW0btU0zk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
                 </div>
 
             </div>
         </div>
     </div>
 
+    {{-- SLIDER RIWAYAT --}}
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+        new Splide('.splide', {
+            type: 'loop',
+            perPage: 3,
+            gap: '5rem',
+            perMove: 1,
+            breakpoints: {
+                1070: {
+                    perPage: 2,
+                },
+                720: {
+                    perPage: 1,
+                }
+            }
+        }).mount();
+    </script>
     {{-- AOS JS --}}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
         AOS.init();
     </script>
