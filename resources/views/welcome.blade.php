@@ -93,8 +93,8 @@
                 </div>
             </div>
 
-            <img class="absolute right-0 top-0 h-100% sm:block hidden"
-                src="{{ asset('assets/images/background.png') }}" />
+            {{-- <img class="absolute right-0 top-0 h-100% sm:block hidden"
+                src="{{ asset('assets/images/background.png') }}" /> --}}
             <img class="absolute left-0 bottom-0 h-100% sm:block hidden"
                 src="{{ asset('assets/images/background2.png') }}" />
             <div class="absolute right-32 bottom-0 h-75%">
@@ -111,123 +111,141 @@
             </div>
         </section>
 
-        {{-- KENAPA --}}
-        <section class="container relative mt-100 bg-white shadow-md mx-auto rounded-2xl p-10 z-10"
-            style="margin-top: -50px">
-            <p class="text-center md:text-4xl text-2xl font-bold mb-16"> Kenapa harus belajar akuntansi / <br> pajak
-                bersama
-                <span class="text-secondary "> kawan
-                    pajak? </span>
-            </p>
-            <div class="grid sm:grid-cols-3 grid-cols-1 gap-5 lg:gap-10 xl:gap-16 2xl:gap-52">
-                <div class="mb-5 md:mb-0">
-                    <div class="flex mb-3 justify-center">
-                        <a class="flex justify-center items-center p-3 bg-primarylight2 rounded-full ">
-                            <img src="{{ asset('assets/images/care.png') }}" class="h-16" />
-                        </a>
+        <div style="background-image: url({{ asset('assets/images/bg2.jpg') }});  " class="relative bg-overlay">
+            {{-- KENAPA --}}
+            <section class="container md:absolute relative mt-100 bg-white shadow-md  rounded-2xl p-10 z-10 mx-auto"
+                style="
+                left: 50%;
+                transform: translate(-50%, -50px);">
+                <p class="text-center md:text-4xl text-2xl font-bold mb-16"> Kenapa harus belajar akuntansi / <br> pajak
+                    bersama
+                    <span class="text-primary "> kawan
+                        pajak? </span>
+                </p>
+                <div class="grid sm:grid-cols-3 grid-cols-1 gap-5 lg:gap-10 xl:gap-16 2xl:gap-52">
+                    <div class="mb-5 md:mb-0">
+                        <div class="flex mb-3 justify-center">
+                            <a class="flex justify-center items-center p-3 bg-primarylight2 rounded-full ">
+                                <img src="{{ asset('assets/images/care.png') }}" class="h-16" />
+                            </a>
 
+                        </div>
+                        <p class="text-center font-bold text-xl mb-3">Semuanya bisa belajar
+                        </p>
+                        <p class="text-center text-gray-600">Kami membantu mahasiswa / pekerja / IBR / JS dalam Ilmu
+                            Akuntansi dan Pajak
+                        </p>
                     </div>
-                    <p class="text-center font-bold text-xl mb-3">Semuanya bisa belajar
-                    </p>
-                    <p class="text-center text-gray-600">Kami membantu mahasiswa / pekerja / IBR / JS dalam Ilmu
-                        Akuntansi dan Pajak
-                    </p>
-                </div>
 
-                <div class="mb-5 md:mb-0">
-                    <div class="flex mb-3 justify-center">
-                        <a class="flex justify-center items-center p-3 bg-primarylight2 rounded-full ">
-                            <img src="{{ asset('assets/images/save-money.png') }}" class="h-16" />
-                        </a>
+                    <div class="mb-5 md:mb-0">
+                        <div class="flex mb-3 justify-center">
+                            <a class="flex justify-center items-center p-3 bg-primarylight2 rounded-full ">
+                                <img src="{{ asset('assets/images/save-money.png') }}" class="h-16" />
+                            </a>
 
+                        </div>
+                        <p class="text-center font-bold text-xl mb-3">Biaya Termurah
+                        </p>
+                        <p class="text-center text-gray-600">Biaya termurah di Indonesia, Mulai dari Rp 50.000 Kamu
+                            bisa
+                            belajar
+                            Akuntansi
+                            dan Pajak
                     </div>
-                    <p class="text-center font-bold text-xl mb-3">Biaya Termurah
-                    </p>
-                    <p class="text-center text-gray-600">Biaya termurah di Indonesia, Mulai dari Rp 50.000 Kamu bisa
-                        belajar
-                        Akuntansi
-                        dan Pajak
-                </div>
 
 
-                <div class="mb-5 md:mb-0">
-                    <div class="flex mb-3 justify-center">
-                        <a class="flex justify-center items-center p-3 bg-primarylight2 rounded-full ">
-                            <img src="{{ asset('assets/images/professional.png') }}" class="h-16" />
-                        </a>
+                    <div class="mb-5 md:mb-0">
+                        <div class="flex mb-3 justify-center">
+                            <a class="flex justify-center items-center p-3 bg-primarylight2 rounded-full ">
+                                <img src="{{ asset('assets/images/professional.png') }}" class="h-16" />
+                            </a>
 
-                    </div>
-                    <p class="text-center font-bold text-xl mb-3">Tutor yang ahli
-                    </p>
+                        </div>
+                        <p class="text-center font-bold text-xl mb-3">Tutor yang ahli
+                        </p>
 
-                    <p class="text-center text-gray-600">Tutor Kami ahli dalam bidang Akuntansi dan Pajak. dan pastinya
-                        sudah
-                        terferivikasi
-                    </p>
-                </div>
-            </div>
-        </section>
-        {{-- OUR SERVICE --}}
-
-
-
-        <section class="ourservice my-60">
-            <p class="text-center md:text-4xl text-2xl font-bold mb-10"> Pilih
-                <span class="text-secondary "> Kelas </span>
-            </p>
-
-            <div class="container  grid 2xl:grid-cols-5 md:grid-cols-3 grid-cols-1 p-5 gap-10 mx-auto">
-                <div class="2xl:block hidden"></div>
-                <div data-aos="fade-up" data-aos-duration="500">
-                    <div class="flex justify-center items-center">
-                        <p class="md:text-4xl text-2xl font-medium text-center">Belajar <br> Akuntansi</p>
+                        <p class="text-center text-gray-600">Tutor Kami ahli dalam bidang Akuntansi dan Pajak. dan
+                            pastinya
+                            sudah
+                            terferivikasi
+                        </p>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="600">
-                    <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
-                        <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                            src="{{ asset('/assets/images/online-test.png') }}" />
-                        <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Akuntansi <br> Online</p>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="700">
-                    <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
-                        <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                            src="{{ asset('/assets/images/school.png') }}" />
-                        <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Akuntansi <br> In Campus</p>
-                    </div>
-                </div>
-            </div>
+            </section>
+            {{-- OUR SERVICE --}}
 
-            <hr class="mx-auto w-96">
 
-            <div class="container 2xl:grid-cols-5 grid md:grid-cols-3 grid-cols-1 p-5 gap-10 mx-auto">
-                <div class="2xl:block hidden"></div>
-                <div data-aos="fade-up" data-aos-duration="500">
-                    <div class="flex justify-center items-center">
-                        <p class="md:text-4xl text-2xl font-medium text-center">Belajar <br> Pajak</p>
+            <div class="md:h-96 h-0"></div>
+
+            <section class="ourservice py-32 relative">
+                <p class="text-center md:text-4xl text-2xl font-bold mb-10 txt-shdw text-white z-10"> Pilih
+                    <span class="text-white txt-shdw"> Kelas </span>
+                </p>
+
+                <div class="container  grid 2xl:grid-cols-5 md:grid-cols-3 grid-cols-1 p-5 gap-10 mx-auto">
+                    <div class="2xl:block hidden"></div>
+                    <div data-aos="fade-up" data-aos-duration="500">
+                        <div class="flex justify-center items-center">
+                            <p class="md:text-4xl text-2xl font-bold text-center text-white"
+                                style="text-shadow: 2px 2px #0007;">Belajar <br> Akuntansi
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="600">
+                        <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
+                            x-effect="console.log(hover)" x-on:mouseenter="hover = true"
+                            @mouseover.away="hover = false">
+                            <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
+                                src="{{ asset('/assets/images/online-test.png') }}" />
+                            <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Akuntansi <br> Online</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="700">
+                        <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
+                            x-effect="console.log(hover)" x-on:mouseenter="hover = true"
+                            @mouseover.away="hover = false">
+                            <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
+                                src="{{ asset('/assets/images/school.png') }}" />
+                            <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Akuntansi <br> In Campus
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="600">
-                    <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
-                        <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                            src="{{ asset('/assets/images/online-test.png') }}" />
-                        <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Pajak <br> Online</p>
+
+                <hr class="mx-auto w-96">
+
+                <div class="container 2xl:grid-cols-5 grid md:grid-cols-3 grid-cols-1 p-5 gap-10 mx-auto">
+                    <div class="2xl:block hidden"></div>
+                    <div data-aos="fade-up" data-aos-duration="500">
+                        <div class="flex justify-center items-center">
+                            <p class="md:text-4xl text-2xl font-bold text-center text-white  "
+                                style="text-shadow: 2px 2px #0007;">Belajar
+                                <br> Pajak
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="600">
+                        <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
+                            x-effect="console.log(hover)" x-on:mouseenter="hover = true"
+                            @mouseover.away="hover = false">
+                            <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
+                                src="{{ asset('/assets/images/online-test.png') }}" />
+                            <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Pajak <br> Online</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="700">
+                        <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
+                            x-effect="console.log(hover)" x-on:mouseenter="hover = true"
+                            @mouseover.away="hover = false">
+                            <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
+                                src="{{ asset('/assets/images/school.png') }}" />
+                            <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Pajak <br> In Campus</p>
+                        </div>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="700">
-                    <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
-                        <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                            src="{{ asset('/assets/images/school.png') }}" />
-                        <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Pajak <br> In Campus</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
 
         {{-- RIWAYAT --}}
         <section class="riwayat "
@@ -313,11 +331,11 @@
         </section>
 
 
-        <section class="purpose container max-w-6xl md:mt-16 mt-10 mx-auto ">
+        <section class="purpose container max-w-6xl md:my-32 my-10 mx-auto ">
             <div data-aos="fade-up" data-aos-duration="500">
                 <div class="flex justify-center items-center ">
                     <p class="md:text-4xl text-2xl font-medium text-center mb-10">Cara Gampang <span
-                            class="text-secondary">Bergabung</span> </p>
+                            class="text-primary">Bergabung</span> </p>
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="500">
@@ -360,19 +378,39 @@
                 </div>
             </div>
 
-            <div class="container bg-white shadow-lg p-10 rounded-lg mb-10">
-                <div class="flex justify-center items-center ">
-                    <p class="md:text-4xl text-2xl font-bold text-center mb-10">Ketika udah bergabung dengan <span
-                            class="text-primary">KBP</span> Kamu Bakal</p>
-
+            <div class=" mb-10 mt-32 grid grid-cols-5 gap-10 ">
+                <div class="relative col-span-3">
+                    <img src="{{ asset('assets/images/bg3.jpg') }}" class="shadow-xl" />
+                    <svg id="sw-js-blob-svg" viewBox="0 0 100 100" class="absolute doanimation"
+                        style="top: -40%; left: -30%;  z-index: -10;" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1"
+                                y2="0">
+                                <stop id="stop1" stop-color="rgba(235.718, 123.654, 70.616, .6)" offset="0%">
+                                </stop>
+                                <stop id="stop2" stop-color="rgba(251, 168, 31, .6)" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#sw-gradient)"
+                            d="M11.1,-14.7C14.1,-8.1,16,-4.1,18.3,2.3C20.5,8.6,23.1,17.1,20.1,25C17.1,32.8,8.6,39.9,-1,40.9C-10.6,41.8,-21.1,36.8,-27.5,28.9C-33.8,21.1,-36,10.6,-34.5,1.5C-33.1,-7.6,-27.9,-15.2,-21.5,-21.8C-15.2,-28.4,-7.6,-34.1,-1.8,-32.3C4.1,-30.5,8.1,-21.4,11.1,-14.7Z"
+                            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+                            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+                    </svg>
                 </div>
-                <div>
-                    <p class="md:text-2xl text-2xl font-medium text-gray-700 ">1. Terbuka tentang ilmu Pajak dan
-                        Akuntansi</p>
-                    <p class="md:text-2xl text-2xl font-medium  text-gray-700">2. Lebih Percaya Diri</p>
-                    <p class="md:text-2xl text-2xl font-medium  text-gray-700">3. Produktif</p>
-                    <p class="md:text-2xl text-2xl font-medium text-gray-700">4. Kompeten Pada -------------
-                    </p>
+                <div class="col-span-2">
+                    <div class="flex justify-start items-center ">
+                        <p class="md:text-2xl text-2xl font-bold  mb-10">Ketika udah bergabung dengan <span
+                                class="text-primary">KBP</span> Kamu Bakal</p>
+
+                    </div>
+                    <div>
+                        <p class="md:text-lg text-xl  text-gray-700 mb-3">1. Terbuka tentang ilmu Pajak dan
+                            Akuntansi</p>
+                        <p class="md:text-lg text-xl   text-gray-700 mb-3">2. Lebih Percaya Diri</p>
+                        <p class="md:text-lg text-xl   text-gray-700 mb-3">3. Produktif</p>
+                        <p class="md:text-lg text-xl  text-gray-700 mb-3">4. Kompeten Pada -------------
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -410,7 +448,7 @@
                 <div class="">
                     <div class="info">
                         <p class="text-4xl text-center" data-aos="fade-up" data-aos-duration="300"><span
-                                class="text-secondary">Kontak </span> Kami
+                                class="text-primary font-bold">Kontak </span> Kami
                         </p>
                         <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600" data-aos="fade-up"
                             data-aos-duration="300">Office</p>
@@ -559,6 +597,15 @@
                         href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly
                         Sikkema</a> on <a
                         href="https://unsplash.com/photos/SiOW0btU0zk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                    Photo by <a
+                        href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly
+                        Sikkema</a> on <a
+                        href="https://unsplash.com/photos/xoU52jUVUXA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+                    Photo by <a
+                        href="https://unsplash.com/@glenncarstenspeters?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Glenn
+                        Carstens-Peters</a> on <a
+                        href="https://unsplash.com/photos/RLw-UC03Gwc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
                 </div>
 

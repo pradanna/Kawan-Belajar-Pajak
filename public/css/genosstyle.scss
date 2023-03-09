@@ -1,8 +1,8 @@
 $primary-color: #1c5e8e;
 $primary-secondary: #f9c50d;
 $primary-colord1: rgb(173, 0, 0);
-$primary-colorl1: #1c5e8e77;
-$primary-colorl2: #d5eeff77;
+$primary-colorl1: #349feb;
+$primary-colorl2: #d5eeff;
 $primary-soft-color1: #1c5e8e77;
 $background-color: #f5f5f7;
 
@@ -40,10 +40,29 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  height: 800px;
   z-index: -10;
+  position: relative;
 }
 
+.txt-shdw {
+  text-shadow: 2px 2px #0007;
+}
+.bg-overlay {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #fff7, #1c5e8e);
+    opacity: 0.9;
+  }
+}
 .nav-link {
   color: black;
   transition: all;
@@ -72,11 +91,10 @@ a.anchor {
 }
 
 .ourservice {
-  margin-top: 5rem;
   padding-bottom: 2rem;
 
   .card {
-    box-shadow: 5px 5px 20px 1px #eee;
+    box-shadow: 5px 5px 20px 1px #6666;
     height: 10rem;
     border-radius: 30px;
     background-color: white;
@@ -290,6 +308,14 @@ a.anchor {
   top: 13%;
   right: 30%;
   height: 6%;
+}
+
+.doanimation {
+  animation-name: moveslightly;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  width: 100%;
+  rotate: 90deg;
 }
 
 @keyframes moveslightly {
