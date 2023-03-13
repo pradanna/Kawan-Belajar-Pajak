@@ -35,7 +35,7 @@
 
         {{-- NAVBAR --}}
         <nav
-            class="z-20 bg-white border-gray-200 fixed top-0 left-0 right-0 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 shadow-sm">
+            class="z-50 bg-white border-gray-200 fixed top-0 left-0 right-0 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 shadow-sm">
             <div class="container flex flex-wrap items-center justify-between mx-auto ">
                 <a class="flex items-center" href="#">
                     <img src="{{ asset('assets/icons/logo1.png') }}" class="h-6 mr-3 sm:h-10" alt="KBP Logo" />
