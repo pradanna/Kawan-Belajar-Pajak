@@ -283,7 +283,7 @@
                     <span class="text-white "> Kawan Belajar Pajak </span>
                 </p>
             </div>
-            <section class="splide sm:p-0 p-5" aria-label="Slide Container Example">
+            <section class="splide sm:p-0 p-5 z-10" aria-label="Slide Container Example">
                 <div class="splide__track container mx-auto p-5">
                     <ul class="splide__list ">
                         <li class="splide__slide">
@@ -362,15 +362,21 @@
         </section>
 
 
-        <section class="purpose w-full">
-            <div class=" container max-w-6xl md:py-32 py-10 mx-auto ">
+        <section class="purpose w-full relative">
+            <img class="absolute  h-100% sm:block hidden obj5  flip-x" src="{{ asset('assets/images/obj3.png') }}" />
+
+            <img class="absolute  h-24 sm:block hidden bottom-80 right-20 "
+                src="{{ asset('assets/images/planepaperwhite.png') }}" />
+
+            <div class=" container max-w-6xl md:py-32 py-10 mx-auto z-10 relative">
                 <div data-aos="fade-up" data-aos-duration="500">
-                    <div class="flex justify-center items-center ">
+                    <div class="flex justify-center items-center z-10 relative">
                         <p
-                            class="md:text-4xl text-2xl  text-center mb-20 px-4 py-2 font-bold text-white white-shadow bg-secondary ">
+                            class="md:text-4xl text-2xl z-10 text-center mb-20 px-4 py-2 font-bold text-white white-shadow bg-secondary ">
                             Cara Gampang Bergabung</p>
                     </div>
                 </div>
+
                 <div data-aos="fade-up" data-aos-duration="500">
                     <div class="grid grid-cols-5 mb-20">
                         <div>
@@ -414,7 +420,9 @@
                     </div>
                 </div>
 
+
                 <div class=" mb-10 mt-32 grid grid-cols-5 gap-10 ">
+
                     <div class="relative col-span-3">
                         <img src="{{ asset('assets/images/bg3.jpg') }}" class=" white-shadow" />
 
