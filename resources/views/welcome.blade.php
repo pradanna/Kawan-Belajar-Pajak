@@ -79,24 +79,32 @@
             </div>
         </nav>
 
-        {{-- HERO --}}
-        <section class="hero bg-white " id="beranda">
-            {{-- Headline --}}
-            <div class="absolute md:left-20 md:top-1/3 md:w-1/3 top-36 left-5 right-5 z-10">
-                <p class="md:text-5xl text-xl font-bold leading-snug" data-aos="fade-right" data-aos-duration="300">
-                    ENJOY BELAJAR AKUNTANSI DAN PAJAK
-                </p>
-                <p class="mt-4" data-aos="fade-right" data-aos-duration="400">We Are Your Friends and You are My
-                    Friend</p>
-                <div data-aos="fade-right" data-aos-duration="500">
-                    <a class="mt-6 inline-block button" href="#">Join Class</a>
-                </div>
+        {{-- Headline --}}
+        <div class="absolute md:left-20 md:top-1/3 md:w-1/3 top-36 left-5 right-5 z-20">
+            <p class="md:text-5xl text-xl font-bold leading-snug text-black text-stroke" data-aos="fade-right"
+                data-aos-duration="300">
+                ENJOY BELAJAR AKUNTANSI DAN PAJAK
+            </p>
+            <p class="mt-4" data-aos="fade-right" data-aos-duration="400">We Are Your Friends and You are My
+                Friend</p>
+            <div data-aos="fade-right" data-aos-duration="500">
+                <a class="mt-6 inline-block button" href="#">Join Class</a>
             </div>
+        </div>
 
-            {{-- <img class="absolute right-0 top-0 h-100% sm:block hidden"
-                src="{{ asset('assets/images/background.png') }}" /> --}}
-            <img class="absolute left-0 bottom-0 h-100% sm:block hidden"
-                src="{{ asset('assets/images/background2.png') }}" />
+        <img class="absolute  h-100% sm:block hidden obj2 z-10" src="{{ asset('assets/images/obj2.png') }}" />
+        <img class="absolute  h-20 sm:block hidden bottom-0 left-10 z-20 flip-x"
+            src="{{ asset('assets/images/planepaperwhite.png') }}" />
+        {{-- HERO --}}
+        <section class="hero  " id="beranda">
+
+
+            <img class="absolute  h-100% sm:block hidden obj1" src="{{ asset('assets/images/obj1.png') }}" />
+            <img class="absolute  h-32 sm:block hidden top-36 right-20 "
+                src="{{ asset('assets/images/planepaperwhite.png') }}" />
+
+
+            <img class="absolute  h-100% sm:block hidden obj3" src="{{ asset('assets/images/obj3.png') }}" />
             <div class="absolute right-32 bottom-0 h-75%">
                 <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/heroimage.png') }}" />
 
@@ -111,7 +119,12 @@
             </div>
         </section>
 
-        <div style="background-image: url({{ asset('assets/images/bg2.jpg') }});  " class="relative bg-overlay">
+        <div style="background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 20%,
+            rgba(255, 255, 255, 1)
+          ), url({{ asset('assets/images/bg2.jpg') }}) no-repeat  center;"
+            class="relative bg-overlay">
             {{-- KENAPA --}}
             <section class="container md:absolute relative mt-100 bg-white shadow-md  rounded-2xl p-10 z-10 mx-auto"
                 style="
@@ -178,9 +191,19 @@
             <div class="md:h-96 h-0"></div>
 
             <section class="ourservice py-32 relative">
-                <p class="text-center md:text-4xl text-2xl font-bold mb-10 txt-shdw text-white z-10"> Pilih
-                    <span class="text-white txt-shdw"> Kelas </span>
-                </p>
+                <div class="flex justify-center">
+                    <p
+                        class="text-center md:text-4xl text-2xl font-bold mb-10 px-4 py-2 txt-shdw text-white z-10 bg-secondary white-shadow ">
+                        Pilih
+                        <span class="text-white txt-shdw"> Kelas </span>
+                    </p>
+                </div>
+
+
+                <img class="absolute  h-96 sm:block hidden right-72 top-40 "
+                    src="{{ asset('assets/images/obj1.png') }}" />
+                <img class="absolute  h-24 sm:block hidden right-80 top-40 doanimation1"
+                    src="{{ asset('assets/images/planepaperwhite.png') }}" />
 
                 <div class="container  grid 2xl:grid-cols-5 md:grid-cols-3 grid-cols-1 p-5 gap-10 mx-auto">
                     <div class="2xl:block hidden"></div>
@@ -247,13 +270,19 @@
 
         </div>
 
-        {{-- RIWAYAT --}}
-        <section class="riwayat "
-            style="background-image: url({{ asset('assets/images/riwayatbackground.jpg') }}); background-size: cover; ">
-            <p class="text-center md:text-4xl text-2xl font-bold mb-10"> Riwayat Peserta <br>
-                <span class="text-black "> Kawan Belajar Pajak </span>
-            </p>
 
+
+        {{-- RIWAYAT --}}
+        <section class="riwayat ">
+            <img class="absolute  h-100% sm:block hidden obj4  flip-x" src="{{ asset('assets/images/obj1.png') }}" />
+            <div class="flex justify-center">
+                <p
+                    class="text-center md:text-4xl text-2xl font-bold mb-10 px-4 py-2 white-shadow bg-secondary text-white">
+                    Riwayat Peserta
+                    <br>
+                    <span class="text-white "> Kawan Belajar Pajak </span>
+                </p>
+            </div>
             <section class="splide sm:p-0 p-5" aria-label="Slide Container Example">
                 <div class="splide__track container mx-auto p-5">
                     <ul class="splide__list ">
@@ -263,7 +292,8 @@
                                     <div class="flex justify-between pb-2">
                                         <div class=" flex-grow">
                                             <p class="font-bold">Nur Imaki</p>
-                                            <p class="bg-primary text-white px-1 rounded-sm inline">Nusa Tenggara Barat
+                                            <p class="bg-secondary text-white px-1 rounded-sm inline">Nusa Tenggara
+                                                Barat
                                             </p>
                                             <p>Kepala ITB</p>
                                         </div>
@@ -297,7 +327,8 @@
                                     <div class="flex justify-between pb-2">
                                         <div class=" flex-grow">
                                             <p class="font-bold">Nur Imaki</p>
-                                            <p class="bg-primary text-white px-1 rounded-sm inline">Nusa Tenggara Barat
+                                            <p class="bg-secondary text-white px-1 rounded-sm inline">Nusa Tenggara
+                                                Barat
                                             </p>
                                             <p>Kepala ITB</p>
                                         </div>
@@ -331,91 +362,94 @@
         </section>
 
 
-        <section class="purpose container max-w-6xl md:my-32 my-10 mx-auto ">
-            <div data-aos="fade-up" data-aos-duration="500">
-                <div class="flex justify-center items-center ">
-                    <p class="md:text-4xl text-2xl font-medium text-center mb-10">Cara Gampang <span
-                            class="text-primary">Bergabung</span> </p>
+        <section class="purpose w-full">
+            <div class=" container max-w-6xl md:py-32 py-10 mx-auto ">
+                <div data-aos="fade-up" data-aos-duration="500">
+                    <div class="flex justify-center items-center ">
+                        <p
+                            class="md:text-4xl text-2xl  text-center mb-20 px-4 py-2 font-bold text-white white-shadow bg-secondary ">
+                            Cara Gampang Bergabung</p>
+                    </div>
                 </div>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="500">
-                <div class="grid grid-cols-5 mb-20">
-                    <div>
-                        <div class="flex mb-3 justify-center">
-                            <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
-                                <img src="{{ asset('assets/images/avatar.png') }}" class="h-16" />
-                            </a>
+                <div data-aos="fade-up" data-aos-duration="500">
+                    <div class="grid grid-cols-5 mb-20">
+                        <div>
+                            <div class="flex mb-3 justify-center">
+                                <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
+                                    <img src="{{ asset('assets/images/avatar.png') }}" class="h-16" />
+                                </a>
+
+                            </div>
+                            <p class="text-center font-bold text-xl ">Hubungi Admin
+                            </p>
+                        </div>
+                        <hr class="my-auto border-yellow-300 border-2">
+
+                        <div>
+                            <div class="flex mb-3 justify-center">
+                                <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
+                                    <img src="{{ asset('assets/images/process.png') }}" class="h-16" />
+                                </a>
+
+                            </div>
+                            <p class="text-center font-bold text-xl ">Ikuti Langkahnya
+                            </p>
 
                         </div>
-                        <p class="text-center font-bold text-xl ">Hubungi Admin
-                        </p>
-                    </div>
-                    <hr class="my-auto border-yellow-300 border-2">
+                        <hr class="my-auto border-yellow-300 border-2">
+                        <div>
+                            <div class="flex mb-3 justify-center">
+                                <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
+                                    <img src="{{ asset('assets/images/fan-club.png') }}" class="h-16" />
+                                </a>
 
-                    <div>
-                        <div class="flex mb-3 justify-center">
-                            <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
-                                <img src="{{ asset('assets/images/process.png') }}" class="h-16" />
-                            </a>
-
-                        </div>
-                        <p class="text-center font-bold text-xl ">Ikuti Langkahnya
-                        </p>
-
-                    </div>
-                    <hr class="my-auto border-yellow-300 border-2">
-                    <div>
-                        <div class="flex mb-3 justify-center">
-                            <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
-                                <img src="{{ asset('assets/images/fan-club.png') }}" class="h-16" />
-                            </a>
+                            </div>
+                            <p class="text-center font-bold text-xl ">Masuk kedalam grup dan Kelas dimulai
+                            </p>
 
                         </div>
-                        <p class="text-center font-bold text-xl ">Masuk kedalam grup dan Kelas dimulai
-                        </p>
+                    </div>
+                </div>
 
+                <div class=" mb-10 mt-32 grid grid-cols-5 gap-10 ">
+                    <div class="relative col-span-3">
+                        <img src="{{ asset('assets/images/bg3.jpg') }}" class="shadow-xl" />
+                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" class="absolute doanimation"
+                            style="top: -40%; left: -30%;  z-index: -10;" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1"
+                                    y2="0">
+                                    <stop id="stop1" stop-color="rgba(235.718, 123.654, 70.616, .6)"
+                                        offset="0%">
+                                    </stop>
+                                    <stop id="stop2" stop-color="rgba(251, 168, 31, .6)" offset="100%"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#sw-gradient)"
+                                d="M11.1,-14.7C14.1,-8.1,16,-4.1,18.3,2.3C20.5,8.6,23.1,17.1,20.1,25C17.1,32.8,8.6,39.9,-1,40.9C-10.6,41.8,-21.1,36.8,-27.5,28.9C-33.8,21.1,-36,10.6,-34.5,1.5C-33.1,-7.6,-27.9,-15.2,-21.5,-21.8C-15.2,-28.4,-7.6,-34.1,-1.8,-32.3C4.1,-30.5,8.1,-21.4,11.1,-14.7Z"
+                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+                                style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+                        </svg>
+                    </div>
+                    <div class="col-span-2">
+                        <div class="flex justify-start items-center ">
+                            <p class="md:text-2xl text-2xl font-bold  mb-10">Ketika udah bergabung dengan <span
+                                    class="text-primary">KBP</span> Kamu Bakal</p>
+
+                        </div>
+                        <div>
+                            <p class="md:text-lg text-xl  text-gray-700 mb-3">1. Terbuka tentang ilmu Pajak dan
+                                Akuntansi</p>
+                            <p class="md:text-lg text-xl   text-gray-700 mb-3">2. Lebih Percaya Diri</p>
+                            <p class="md:text-lg text-xl   text-gray-700 mb-3">3. Produktif</p>
+                            <p class="md:text-lg text-xl  text-gray-700 mb-3">4. Kompeten Pada -------------
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class=" mb-10 mt-32 grid grid-cols-5 gap-10 ">
-                <div class="relative col-span-3">
-                    <img src="{{ asset('assets/images/bg3.jpg') }}" class="shadow-xl" />
-                    <svg id="sw-js-blob-svg" viewBox="0 0 100 100" class="absolute doanimation"
-                        style="top: -40%; left: -30%;  z-index: -10;" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1"
-                                y2="0">
-                                <stop id="stop1" stop-color="rgba(235.718, 123.654, 70.616, .6)" offset="0%">
-                                </stop>
-                                <stop id="stop2" stop-color="rgba(251, 168, 31, .6)" offset="100%"></stop>
-                            </linearGradient>
-                        </defs>
-                        <path fill="url(#sw-gradient)"
-                            d="M11.1,-14.7C14.1,-8.1,16,-4.1,18.3,2.3C20.5,8.6,23.1,17.1,20.1,25C17.1,32.8,8.6,39.9,-1,40.9C-10.6,41.8,-21.1,36.8,-27.5,28.9C-33.8,21.1,-36,10.6,-34.5,1.5C-33.1,-7.6,-27.9,-15.2,-21.5,-21.8C-15.2,-28.4,-7.6,-34.1,-1.8,-32.3C4.1,-30.5,8.1,-21.4,11.1,-14.7Z"
-                            width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                            style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
-                    </svg>
-                </div>
-                <div class="col-span-2">
-                    <div class="flex justify-start items-center ">
-                        <p class="md:text-2xl text-2xl font-bold  mb-10">Ketika udah bergabung dengan <span
-                                class="text-primary">KBP</span> Kamu Bakal</p>
-
-                    </div>
-                    <div>
-                        <p class="md:text-lg text-xl  text-gray-700 mb-3">1. Terbuka tentang ilmu Pajak dan
-                            Akuntansi</p>
-                        <p class="md:text-lg text-xl   text-gray-700 mb-3">2. Lebih Percaya Diri</p>
-                        <p class="md:text-lg text-xl   text-gray-700 mb-3">3. Produktif</p>
-                        <p class="md:text-lg text-xl  text-gray-700 mb-3">4. Kompeten Pada -------------
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {{-- <section class="history mt-52">
+            {{-- <section class="history mt-52">
             <div data-aos="fade-up" data-aos-duration="500"
                 class="container mx-auto relative flex gap-10 items-start">
                 <div class="" style="margin-top: -100px">
@@ -438,7 +472,7 @@
             </div>
         </section> --}}
 
-
+        </section>
 
         <a class="anchor" id="contact"></a>
         <section class="kontak" class="mt-10">

@@ -28,13 +28,33 @@ html {
 
 body {
   font-family: "Poppins", sans-serif !important;
-  background-color: #f5f5f7;
+  background-color: hwb(240 96% 3%);
 }
 
 .hero {
   height: 800px;
   z-index: -10;
   position: relative;
+  background-color: #96d5f4;
+  overflow: hidden;
+}
+.hero .obj1 {
+  right: -30rem;
+}
+.hero .obj3 {
+  left: -30rem;
+  top: -40rem;
+}
+
+.obj2 {
+  left: -30rem;
+  bottom: -30rem;
+}
+
+.obj4 {
+  left: -15rem;
+  top: -10rem;
+  transform: scaleY(-1);
 }
 
 .txt-shdw {
@@ -53,8 +73,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4666666667), #1c5e8e);
-  opacity: 0.9;
+  background-image: linear-gradient(to top, rgba(150, 213, 244, 0.4666666667), #96d5f4);
+  opacity: 1;
 }
 
 .nav-link {
@@ -72,6 +92,10 @@ a.anchor {
   position: relative;
   top: -70px;
   visibility: hidden;
+}
+
+.flip-x {
+  transform: scaleX(-1);
 }
 
 .ourservice {
@@ -92,13 +116,14 @@ a.anchor {
 }
 .ourservice .card:hover {
   scale: 1.1;
-  background-color: #349feb;
+  background-color: #f9c50d;
 }
 
 .riwayat {
-  background-color: white;
+  background-image: linear-gradient(rgba(150, 213, 244, 0.4666666667), #96d5f4);
   padding-top: 5rem;
   padding-bottom: 5rem;
+  position: relative;
 }
 .riwayat .card {
   box-shadow: 5px 5px 20px 1px #eee;
@@ -107,11 +132,17 @@ a.anchor {
   padding: 1rem;
 }
 
+.purpose {
+  background-color: #96d5f4;
+}
 .purpose .card {
-  background: linear-gradient(319.6deg, rgb(243, 0, 79) 20.5%, rgb(255, 236, 68) 110.9%);
   box-shadow: 5px 5px 20px 1px #eee;
   border-radius: 10px;
   padding: 2rem;
+}
+
+.white-shadow {
+  box-shadow: 5px 5px 1px white;
 }
 
 .history {
@@ -175,7 +206,7 @@ a.anchor {
 }
 
 .footer {
-  background-color: #d5eeff;
+  background-color: #96d5f4;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -214,23 +245,28 @@ a.anchor {
   color: black;
 }
 
+.text-stroke {
+  -webkit-text-stroke: 1px white;
+}
+
 .button {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: #1c5e8e;
+  background-color: #f9c50d;
   color: white;
-  border-radius: 50px;
-  box-shadow: 5px 5px 5px #ddd;
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #eee;
   z-index: 100;
   cursor: pointer;
   transition: all;
   transition-duration: 500ms;
+  font-weight: bold;
 }
 .button:hover {
   scale: 1.1;
-  background-color: #349feb;
+  background-color: rgb(218, 171, 1);
 }
 
 .button-sm {
@@ -281,6 +317,12 @@ a.anchor {
   animation-iteration-count: infinite;
   width: 100%;
   rotate: 90deg;
+}
+
+.doanimation1 {
+  animation-name: moveslightly;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes moveslightly {

@@ -1,10 +1,12 @@
 $primary-color: #1c5e8e;
 $primary-secondary: #f9c50d;
+$primary-secondary2: rgb(218, 171, 1);
 $primary-colord1: rgb(173, 0, 0);
 $primary-colorl1: #349feb;
 $primary-colorl2: #d5eeff;
 $primary-soft-color1: #1c5e8e77;
-$background-color: #f5f5f7;
+$background-color: hwb(240 96% 3%);
+$background-blue: #96d5f4;
 
 html {
   scroll-behavior: smooth;
@@ -43,11 +45,35 @@ body {
   height: 800px;
   z-index: -10;
   position: relative;
+  background-color: $background-blue;
+  overflow: hidden;
+
+  .obj1 {
+    right: -30rem;
+  }
+
+  .obj3 {
+    left: -30rem;
+    top: -40rem;
+  }
+}
+
+.obj2 {
+  left: -30rem;
+  bottom: -30rem;
+}
+
+.obj4 {
+  left: -15rem;
+  top: -10rem;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 .txt-shdw {
   text-shadow: 2px 2px #0007;
 }
+
 .bg-overlay {
   background-position: center;
   background-repeat: no-repeat;
@@ -59,10 +85,11 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, #fff7, #1c5e8e);
-    opacity: 0.9;
+    background-image: linear-gradient(to top, #96d5f477, #96d5f4);
+    opacity: 1;
   }
 }
+
 .nav-link {
   color: black;
   transition: all;
@@ -90,6 +117,11 @@ a.anchor {
   visibility: hidden;
 }
 
+.flip-x {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 .ourservice {
   padding-bottom: 2rem;
 
@@ -109,15 +141,16 @@ a.anchor {
 
     &:hover {
       scale: 1.1;
-      background-color: $primary-colorl1;
+      background-color: $primary-secondary;
     }
   }
 }
 
 .riwayat {
-  background-color: white;
+  background-image: linear-gradient(#96d5f477, #96d5f4);
   padding-top: 5rem;
   padding-bottom: 5rem;
+  position: relative;
 
   .card {
     box-shadow: 5px 5px 20px 1px #eee;
@@ -128,18 +161,18 @@ a.anchor {
 }
 
 .purpose {
+  background-color: $background-blue;
+
   .card {
-    background: linear-gradient(
-      319.6deg,
-      rgb(243, 0, 79) 20.5%,
-      rgb(255, 236, 68) 110.9%
-    );
     box-shadow: 5px 5px 20px 1px #eee;
     border-radius: 10px;
     padding: 2rem;
   }
 }
 
+.white-shadow {
+  box-shadow: 5px 5px 1px white;
+}
 .history {
   background-color: white;
   padding-top: 2rem;
@@ -204,7 +237,7 @@ a.anchor {
 }
 
 .footer {
-  background-color: $primary-colorl2;
+  background-color: $background-blue;
   padding-top: 5rem;
   padding-bottom: 5rem;
   .title {
@@ -246,23 +279,27 @@ a.anchor {
   }
 }
 
+.text-stroke {
+  -webkit-text-stroke: 1px white;
+}
+
 .button {
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: $primary-color;
+  background-color: $primary-secondary;
   color: white;
-  border-radius: 50px;
-  box-shadow: 5px 5px 5px #ddd;
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #eee;
   z-index: 100;
   cursor: pointer;
   transition: all;
   transition-duration: 500ms;
-
+  font-weight: bold;
   &:hover {
     scale: 1.1;
-    background-color: $primary-colorl1;
+    background-color: $primary-secondary2;
   }
 }
 
@@ -316,6 +353,12 @@ a.anchor {
   animation-iteration-count: infinite;
   width: 100%;
   rotate: 90deg;
+}
+
+.doanimation1 {
+  animation-name: moveslightly;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes moveslightly {
