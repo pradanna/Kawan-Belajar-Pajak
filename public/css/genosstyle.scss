@@ -1,5 +1,6 @@
 $primary-color: #1c5e8e;
 $primary-secondary: #f9c50d;
+$primary-secondary3: #c29800;
 $primary-secondary2: rgb(218, 171, 1);
 $primary-colord1: rgb(173, 0, 0);
 $primary-colorl1: #349feb;
@@ -18,6 +19,10 @@ html {
 
 .bg-secondary {
   background-color: $primary-secondary;
+}
+
+.bg-secondary3 {
+  background-color: $primary-secondary3;
 }
 
 .bg-primarylight {

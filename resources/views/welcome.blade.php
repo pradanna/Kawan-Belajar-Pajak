@@ -277,7 +277,7 @@
             <img class="absolute  h-100% sm:block hidden obj4  flip-x" src="{{ asset('assets/images/obj1.png') }}" />
             <div class="flex justify-center">
                 <p
-                    class="text-center md:text-4xl text-2xl font-bold mb-10 px-4 py-2 white-shadow bg-secondary text-white">
+                    class="text-center md:text-4xl text-2xl font-bold mb-10 px-4 py-2 white-shadow bg-secondary text-white z-10">
                     Riwayat Peserta
                     <br>
                     <span class="text-white "> Kawan Belajar Pajak </span>
@@ -380,7 +380,8 @@
                                 </a>
 
                             </div>
-                            <p class="text-center font-bold text-xl ">Hubungi Admin
+                            <p class="text-center font-bold text-xl text-black bg-secondary  white-shadow">Hubungi
+                                Admin
                             </p>
                         </div>
                         <hr class="my-auto border-yellow-300 border-2">
@@ -392,7 +393,8 @@
                                 </a>
 
                             </div>
-                            <p class="text-center font-bold text-xl ">Ikuti Langkahnya
+                            <p class="text-center font-bold text-xl text-black bg-secondary  white-shadow">Ikuti
+                                Langkahnya
                             </p>
 
                         </div>
@@ -404,7 +406,8 @@
                                 </a>
 
                             </div>
-                            <p class="text-center font-bold text-xl ">Masuk kedalam grup dan Kelas dimulai
+                            <p class="text-center font-bold text-xl text-black bg-secondary  white-shadow">Masuk
+                                kedalam grup dan Kelas dimulai
                             </p>
 
                         </div>
@@ -413,36 +416,29 @@
 
                 <div class=" mb-10 mt-32 grid grid-cols-5 gap-10 ">
                     <div class="relative col-span-3">
-                        <img src="{{ asset('assets/images/bg3.jpg') }}" class="shadow-xl" />
-                        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" class="absolute doanimation"
-                            style="top: -40%; left: -30%;  z-index: -10;" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1"
-                                    y2="0">
-                                    <stop id="stop1" stop-color="rgba(235.718, 123.654, 70.616, .6)"
-                                        offset="0%">
-                                    </stop>
-                                    <stop id="stop2" stop-color="rgba(251, 168, 31, .6)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)"
-                                d="M11.1,-14.7C14.1,-8.1,16,-4.1,18.3,2.3C20.5,8.6,23.1,17.1,20.1,25C17.1,32.8,8.6,39.9,-1,40.9C-10.6,41.8,-21.1,36.8,-27.5,28.9C-33.8,21.1,-36,10.6,-34.5,1.5C-33.1,-7.6,-27.9,-15.2,-21.5,-21.8C-15.2,-28.4,-7.6,-34.1,-1.8,-32.3C4.1,-30.5,8.1,-21.4,11.1,-14.7Z"
-                                width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
-                                style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
-                        </svg>
+                        <img src="{{ asset('assets/images/bg3.jpg') }}" class=" white-shadow" />
+
                     </div>
                     <div class="col-span-2">
                         <div class="flex justify-start items-center ">
-                            <p class="md:text-2xl text-2xl font-bold  mb-10">Ketika udah bergabung dengan <span
-                                    class="text-primary">KBP</span> Kamu Bakal</p>
+                            <p class="md:text-2xl text-2xl font-bold  mb-10 text-white bg-primary  white-shadow p-3">
+                                Ketika udah bergabung dengan
+                                KBP
+                                Kamu Bakal</p>
 
                         </div>
                         <div>
-                            <p class="md:text-lg text-xl  text-gray-700 mb-3">1. Terbuka tentang ilmu Pajak dan
+                            <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3">1. Terbuka
+                                tentang ilmu Pajak dan
                                 Akuntansi</p>
-                            <p class="md:text-lg text-xl   text-gray-700 mb-3">2. Lebih Percaya Diri</p>
-                            <p class="md:text-lg text-xl   text-gray-700 mb-3">3. Produktif</p>
-                            <p class="md:text-lg text-xl  text-gray-700 mb-3">4. Kompeten Pada -------------
+                            <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3">2. Lebih
+                                Percaya
+                                Diri</p>
+                            <p class="md:text-lg text-xl   text-white bg-primary  white-shadow mb-3  p-3">3.
+                                Produktif</p>
+                            <p class="md:text-lg text-xl  text-white bg-secondary  white-shadow mb-3  p-3">4. Kompeten
+                                Pada
+                                -------------
                             </p>
                         </div>
                     </div>
