@@ -13,6 +13,9 @@ html {
   scroll-behavior: smooth;
 }
 
+.bg-blue {
+  background-color: $background-blue;
+}
 .bg-primary {
   background-color: $primary-color;
 }
@@ -78,10 +81,10 @@ body {
 
 .obj5 {
   right: -15rem;
-  top: -10rem;
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
   z-index: 0;
+  height: 80%;
 }
 
 .txt-shdw {
