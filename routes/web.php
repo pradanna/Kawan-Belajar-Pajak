@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/tentang', function () {
     return view('tentang');
 });
+
+Route::get('/pendidikan', function () {
+    return view('pendidikan');
+});
+
+Route::get('/berita', function () {
+    return view('berita');
+});

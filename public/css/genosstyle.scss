@@ -190,6 +190,11 @@ a.anchor {
 .white-shadow {
   box-shadow: 5px 5px 1px white;
 }
+
+.secondary-shadow {
+  box-shadow: 5px 5px 1px $primary-secondary;
+}
+
 .history {
   background-color: white;
   padding-top: 2rem;
@@ -320,6 +325,26 @@ a.anchor {
   }
 }
 
+.button-primary {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #eee;
+  z-index: 100;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 500ms;
+  font-weight: bold;
+  &:hover {
+    scale: 1.1;
+    background-color: $primary-colorl1;
+  }
+}
+
 .button-sm {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -389,5 +414,18 @@ a.anchor {
 
   100% {
     transform: translate(0, 0);
+  }
+}
+
+.fasilitas {
+  p:nth-child(odd) {
+    background-color: $primary-color;
+    padding: 10px;
+    color: white;
+  }
+  p:nth-child(even) {
+    background-color: $primary-secondary;
+    padding: 10px;
+    color: white;
   }
 }

@@ -11,23 +11,26 @@
 @endsection
 @section('content')
     <div class="bg-blue ">
+
         <div class="h-20"></div>
         <img class="absolute  h-100% sm:block hidden obj2 z-10" src="{{ asset('assets/images/obj2.png') }}" />
         <img class="absolute  h-20 sm:block hidden bottom-0 left-10 z-10 flip-x"
             src="{{ asset('assets/images/planepaperwhite.png') }}" />
 
 
+
+
         <section class="h-72 bg-blue flex justify-center items-center relative">
             <p class="inline-block p-3 text-2xl text-white bg-secondary white-shadow font-bold z-10">TENTANG KAMI</p>
         </section>
 
-        <div style="overflow: hidden; width: 100vw; ">
+
+        <div class=" overflow-hidden">
             <img class="absolute  h-100% sm:block hidden " style="right: -30rem; top: -10rem"
                 src="{{ asset('assets/images/obj1.png') }}" />
             <img class="absolute  h-32 sm:block hidden top-36 right-20 "
                 src="{{ asset('assets/images/planepaperwhite.png') }}" />
         </div>
-
 
         {{-- SEJARAH BERDIRI --}}
         <section class="relative">
@@ -58,7 +61,7 @@
         {{-- SEJARAH BERDIRI --}}
         <section>
             <div class="container relative mx-auto pt-20 z-10">
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
                     <div>
                         <div class="flex gap-4">
                             <p class="inline-block p-3 text-2xl text-white bg-secondary white-shadow font-bold px-6">Visi
@@ -117,7 +120,7 @@
                         Belajar Pajak</p>
                 </div>
 
-                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-16" class="z-10">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-16 px-5 sm:px-0" class="z-10">
                     <div>
                         <div class="flex gap-4">
                             <div class="white-shadow">
@@ -369,7 +372,7 @@
         </section>
 
         {{-- LINGKUNGAN BELAJAR --}}
-        <section class="riwayat overflow-hidden">
+        <section class="riwayat overflow-hidden mx-5 sm:mx-0">
             <img class="absolute  h-100% sm:block hidden obj5  flip-x" src="{{ asset('assets/images/obj2.png') }}" />
             <img class="absolute  h-28 sm:block hidden top-0 right-56    z-10 flip-x"
                 src="{{ asset('assets/images/planepaperwhite.png') }}" />
@@ -438,8 +441,8 @@
                 focus: 'left',
                 breakpoints: {
                     600: {
-                        fixedWidth: 60,
-                        fixedHeight: 44,
+                        fixedWidth: 100,
+                        fixedHeight: 50,
                     },
                 },
             });
@@ -451,6 +454,11 @@
                 pagination: false,
                 arrows: false,
                 fixedHeight: 500,
+                breakpoints: {
+                    600: {
+                        fixedHeight: 400,
+                    },
+                }
             });
 
             main.sync(thumbnails);

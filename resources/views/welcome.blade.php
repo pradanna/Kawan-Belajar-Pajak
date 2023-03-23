@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- Headline --}}
-    <div class="absolute md:left-20 md:top-1/3 md:w-1/3 top-36 left-5 right-5 z-20">
+    <div class="absolute md:left-28 md:top-1/3 md:w-1/3 top-36 left-5 right-5 z-20">
         <p class="md:text-5xl text-xl font-bold leading-snug text-black text-stroke" data-aos="fade-right"
             data-aos-duration="300">
             ENJOY BELAJAR AKUNTANSI DAN PAJAK
@@ -43,7 +43,7 @@
     rgba(255, 255, 255, 0) 20%,
     rgba(255, 255, 255, 1)
   ), url({{ asset('assets/images/bg2.jpg') }}) no-repeat  center;"
-        class="relative bg-overlay">
+        class="relative bg-overlay px-5">
         {{-- KENAPA --}}
         <section class="container md:absolute relative mt-100 bg-white shadow-md  rounded-2xl p-10 z-10 mx-auto"
             style="
@@ -290,8 +290,8 @@
             </div>
 
             <div data-aos="fade-up" data-aos-duration="500">
-                <div class="grid grid-cols-5 mb-20">
-                    <div>
+                <div class="grid sm:grid-cols-5 grid-cols-1 mb-20 px-5">
+                    <div class="sm:mb-0 mb-10">
                         <div class="flex mb-3 justify-center">
                             <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
                                 <img src="{{ asset('assets/images/avatar.png') }}" class="h-16" />
@@ -302,9 +302,9 @@
                             Admin
                         </p>
                     </div>
-                    <hr class="my-auto border-yellow-300 border-2">
+                    <hr class="my-auto border-yellow-300 border-2 md:block hidden">
 
-                    <div>
+                    <div class="sm:mb-0 mb-10">
                         <div class="flex mb-3 justify-center">
                             <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
                                 <img src="{{ asset('assets/images/process.png') }}" class="h-16" />
@@ -316,8 +316,8 @@
                         </p>
 
                     </div>
-                    <hr class="my-auto border-yellow-300 border-2">
-                    <div>
+                    <hr class="my-auto border-yellow-300 border-2 md:block hidden">
+                    <div class="sm:mb-0 mb-10">
                         <div class="flex mb-3 justify-center">
                             <a class="flex justify-center items-center p-3 bg-secondary rounded-full ">
                                 <img src="{{ asset('assets/images/fan-club.png') }}" class="h-16" />
@@ -333,9 +333,9 @@
             </div>
 
 
-            <div class=" mb-10 mt-32 grid grid-cols-5 gap-10 ">
+            <div class=" mb-10 mt-32 md:grid md:grid-cols-5  gap-10 md:px-0 px-5">
 
-                <div class="relative col-span-3">
+                <div class="relative col-span-3 md:block hidden">
                     <img src="{{ asset('assets/images/bg3.jpg') }}" class=" white-shadow" />
 
                 </div>
