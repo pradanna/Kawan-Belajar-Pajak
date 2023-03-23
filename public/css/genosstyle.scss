@@ -429,3 +429,14 @@ a.anchor {
     color: white;
   }
 }
+
+.berita {
+  section:nth-child(odd) {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  section:nth-child(even) {
+    flex-direction: row-reverse;
+    margin-bottom: 30px;
+  }
+}

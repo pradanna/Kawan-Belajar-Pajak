@@ -16,7 +16,7 @@
 
 
         <div class="berita ">
-            <section class="container mx-auto flex gap-4 bg-white bg-opacity-50 z-20 relative items-stretch">
+            <div class="container mx-auto flex gap-4 bg-white bg-opacity-50 z-20 relative items-stretch">
                 <img src="http://1.bp.blogspot.com/-aAjsS0A2Crc/VXgFauTv6sI/AAAAAAAAA_g/oGQtii4vnIQ/s1600/blog%2Bkeuangan%2B%25283%2529.png"
                     class="w-1/3 object-cover min-h-50  flex-none" />
                 <div class="p-5 " style="flex-grow: 1">
@@ -28,7 +28,7 @@
 
                         </div>
                     </div>
-                    <p class="text-sm mt-6 text-gray-700">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    <p class="text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry.
                         Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
@@ -69,21 +69,17 @@
                         Lorem Ipsum.
                     </p>
                 </div>
-            </section>
+            </div>
 
-            <section class="container mx-auto flex gap-4 bg-white bg-opacity-50 z-20 relative items-stretch">
+            <div class="container mx-auto flex gap-4 bg-white bg-opacity-50 z-20 relative items-stretch">
                 <img src="http://1.bp.blogspot.com/-aAjsS0A2Crc/VXgFauTv6sI/AAAAAAAAA_g/oGQtii4vnIQ/s1600/blog%2Bkeuangan%2B%25283%2529.png"
                     class="w-1/3 object-cover min-h-50  flex-none" />
                 <div class="p-5 " style="flex-grow: 1">
                     <div class="flex justify-between w-full">
                         <p class="text-2xl font-bold">Judul Berita</p>
-                        <div class="text-right">
-                            <p>23 Maret 2023 20:00</p>
-                            <p>Autor: Pradana</p>
-
-                        </div>
+                        <p>23 Maret 2023 20:00</p>
                     </div>
-                    <p class="text-sm  mt-6 text-gray-700">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    <p class="text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry.
                         Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
@@ -93,7 +89,7 @@
                         and more recently with desktop publishing software like Aldus PageMaker including versions of
                         Lorem Ipsum.</p>
                 </div>
-            </section>
+            </div>
 
         </div>
 

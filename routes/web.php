@@ -28,3 +28,9 @@ Route::get('/pendidikan', function () {
 Route::get('/berita', function () {
     return view('berita');
 });
+
+
+
+Route::get('/testimoni', function () {
+    return view('testimoni');
+});
