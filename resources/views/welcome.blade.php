@@ -28,13 +28,9 @@
 
         <img class="absolute  h-100% sm:block hidden obj3" src="{{ asset('assets/images/obj3.png') }}" />
         <div class="absolute right-32 bottom-0 h-75%">
-            <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/heroimage.png') }}" />
+            <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/logokba.png') }}" />
 
-            <img class="absolute object-contain  md:block hidden  acc1" src="{{ asset('assets/images/heroacc3.png') }}" />
 
-            <img class="absolute object-contain  md:block hidden  acc2" src="{{ asset('assets/images/heroacc3.png') }}" />
-
-            <img class="absolute object-contain  md:block hidden  acc3" src="{{ asset('assets/images/heroacc3.png') }}" />
         </div>
     </section>
 
@@ -348,15 +344,15 @@
 
                     </div>
                     <div>
-                        <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3">1. Terbuka
+                        <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-6">1. Terbuka
                             tentang ilmu Pajak dan
                             Akuntansi</p>
-                        <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3">2. Lebih
+                        <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3 ml-6">2. Lebih
                             Percaya
                             Diri</p>
-                        <p class="md:text-lg text-xl   text-white bg-primary  white-shadow mb-3  p-3">3.
+                        <p class="md:text-lg text-xl   text-white bg-primary  white-shadow mb-3  p-3 mr-6">3.
                             Produktif</p>
-                        <p class="md:text-lg text-xl  text-white bg-secondary  white-shadow mb-3  p-3">4. Kompeten
+                        <p class="md:text-lg text-xl  text-white bg-secondary  white-shadow mb-3  p-3 ml-6">4. Kompeten
                             Pada
                             -------------
                         </p>
@@ -391,6 +387,58 @@
     </section>
 
     <a class="anchor" id="contact"></a>
+
+    <section class="kontak" class="mt-10">
+
+        <div class="mx-auto container">
+
+            <div class="">
+                <div class="info">
+                    <p class="text-4xl text-center mb-20" data-aos="fade-up" data-aos-duration="300"><span
+                            class="text-primary font-bold">Tentang </span> Kami
+                    </p>
+
+                    <div class="flex flex-row-reverse gap-10">
+                        <div>
+                            <img src="{{ asset('assets/images/sertifikat.jpg') }}" class=" object-contain"
+                                style="width: 100rem" />
+                        </div>
+                        <div>
+                            <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">Teman
+                                Belajan
+                                Akuntansu
+                                dan Kawan Belajar Pajak merupakan media pembelajaran akuntansi dan perpajakan
+                                yang dimiliki oleh PT KINERJA BERKAH PRATAMA. Yang telah terdaftar di OSIS Nomor
+                                201022000568755
+                                dengan KBLI 85491, 85495 dan 85499.</p>
+                            <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3 ml-10">Berbekal
+                                dari
+                                pengalaman praktik kami bekerja di lapangan, kami mengajak teman-teman semuanya untuk
+                                bergabung dan belajar tentang akuntansi serta bagaimana penerapan akuntansi di lapangan.
+                                Kami
+                                berangkat dari banyak kegelisahan teman-teman baik siswa akuntansi, mahasiswa akuntansi,
+                                mahasiswa
+                                perpajakan dan juga yang sifatnya umum seperti pelaku UMKM yang masih kebingungan dalam
+                                pengelolaan
+                                keuangan usaha/bisnisnya.</p>
+                            <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">Oleh karena
+                                itu,
+                                harapan
+                                dan tujuan kita adalah memecahkan kegelisahan tersebut dengan cara membantu
+                                teman-teman semuanya. Arti teman/kawan belajar memiliki makna bahwa kita adalah teman kalian
+                                dan
+                                kalian adalah teman kita. Jadi anggap saja kita seperti teman dekat atau bahkan keluarga
+                                (tidak
+                                usah
+                                sungkan).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="kontak" class="mt-10">
 
         <div class="mx-auto container">

@@ -34,13 +34,18 @@
 </head>
 
 <body style="overflow-x: hidden">
+    {{-- <div id="loading" class="z-50 fixed h-full w-full bg-blue flex justify-center items-center">
+        <img src="{{ asset('assets/images/loading.gif') }}" />
+    </div> --}}
     <div class="">
+
 
         {{-- NAVBAR --}}
         <nav
             class="z-50 bg-white border-gray-200 fixed top-0 left-0 right-0 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 shadow-sm">
+
             <div class="container flex flex-wrap items-center justify-between mx-auto ">
-                <a class="flex items-center" href="#">
+                <a class="flex items-center" href="/">
                     <img src="{{ asset('assets/icons/logo1.png') }}" class="h-6 mr-3 sm:h-10" alt="KBP Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Kawan Belajar
                         Pajak</span>
@@ -60,22 +65,27 @@
                     <ul
                         class="flex flex-col p-4 mt-4   md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
                         <li>
-                            <a href="#beranda" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Tentang</a>
+                            <a href="/" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Beranda</a>
+                        </li>
+
+                        <li>
+                            <a href="/tentang" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Tentang</a>
                         </li>
                         <li>
-                            <a href="#layanan" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Pendidikan</a>
+                            <a href="/pendidikan" class="block py-2 pl-3 pr-4 nav-link"
+                                aria-current="page">Pendidikan</a>
                         </li>
                         <li>
-                            <a href="#portfolio" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Berita</a>
+                            <a href="/berita" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Berita</a>
                         </li>
                         <li>
-                            <a href="#client" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Testimoni</a>
+                            <a href="/testimoni" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Testimoni</a>
                         </li>
                         <li>
-                            <a href="#contact" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Blog</a>
+                            <a href="/blog" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Blog</a>
                         </li>
                         <li>
-                            <a href="#contact" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Kontak</a>
+                            <a href="/kontak" class="block py-2 pl-3 pr-4 nav-link" aria-current="page">Kontak</a>
                         </li>
                     </ul>
                 </div>
@@ -94,11 +104,15 @@
                     <p class="content text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry.
                         Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five
+                        centuries,
                         but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                        passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions
+                        of
                         Lorem Ipsum.</p>
                 </div>
                 <div>
@@ -189,9 +203,11 @@
                     <a class="block link" target="_blank"
                         href="https://www.freepik.com/free-vector/yellow-background-with-circular-shapes_25138673.htm#query=blue%20yellow&position=25&from_view=keyword&track=ais">Image
                         by starline</a> on Freepik
-                    <a href="https://www.flaticon.com/free-icons/contact" title="contact icons">Contact icons created
+                    <a href="https://www.flaticon.com/free-icons/contact" title="contact icons">Contact icons
+                        created
                         by Vector Stall - Flaticon</a>
-                    <a href="https://www.flaticon.com/free-icons/process" title="process icons">Process icons created
+                    <a href="https://www.flaticon.com/free-icons/process" title="process icons">Process icons
+                        created
                         by Becris - Flaticon</a>
                     <a href="https://www.flaticon.com/free-icons/fan-club" title="fan club icons">Fan club icons
                         created by noomtah - Flaticon</a>
@@ -244,6 +260,12 @@
 
     @yield('morejs')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    {{-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var load = document.getElementById("loading");
+            load.classList.add("hidden");
+        });
+    </script> --}}
 </body>
 
 {{-- CREDIT --}}

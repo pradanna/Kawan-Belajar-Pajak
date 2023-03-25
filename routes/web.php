@@ -34,3 +34,14 @@ Route::get('/berita', function () {
 Route::get('/testimoni', function () {
     return view('testimoni');
 });
+
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+
+
+Route::get('/kontak', function () {
+    return view('kontak');
+});
