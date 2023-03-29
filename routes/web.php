@@ -26,20 +26,17 @@ Route::get('/pendidikan', function () {
 });
 
 Route::get('/berita', function () {
-    return view('Berita');
+    return view('berita');
 });
-
 
 
 Route::get('/testimoni', function () {
     return view('testimoni');
 });
 
-
 Route::get('/blog', function () {
     return view('blog');
 });
-
 
 
 Route::get('/kontak', function () {

@@ -98,7 +98,7 @@
 
 
         <footer class="footer  ">
-            <div class="container grid md:grid-cols-4 grid-cols-1 gap-10 md:mx-auto md:px-0 px-5">
+            <div class="container grid md:grid-cols-3 grid-cols-1 gap-10 md:mx-auto md:px-0 px-5">
                 <div class="md:col-span-2">
 
                     <p class="title ">Sejarah Singkat</p>
