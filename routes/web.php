@@ -26,7 +26,7 @@ Route::get('/pendidikan', function () {
 });
 
 Route::get('/berita', function () {
-    return view('berita');
+    return view('Berita');
 });
 
 
