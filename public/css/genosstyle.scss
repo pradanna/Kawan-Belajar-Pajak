@@ -345,6 +345,25 @@ a.anchor {
   }
 }
 
+.button-joinclass {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: orange;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #eee;
+  z-index: 100;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 500ms;
+  font-weight: bold;
+  &:hover {
+    scale: 1.1;
+    background-color: orangered;
+  }
+}
 .button-sm {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;

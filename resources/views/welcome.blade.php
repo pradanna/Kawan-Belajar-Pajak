@@ -2,15 +2,14 @@
 
 @section('content')
     {{-- Headline --}}
-    <div class="absolute md:left-28 md:top-1/3 md:w-1/3 top-36 left-5 right-5 z-20">
-        <p class="md:text-5xl text-xl font-bold leading-snug text-black text-stroke" data-aos="fade-right"
-            data-aos-duration="300">
+    <div class="absolute md:left-28 md:top-1/4 md:w-1/3 top-36 left-5 right-5 z-20">
+        <p class="md:text-7xl text-xl font-bold leading-snug text-black " data-aos="fade-right" data-aos-duration="300">
             ENJOY BELAJAR AKUNTANSI DAN PAJAK
         </p>
-        <p class="mt-4" data-aos="fade-right" data-aos-duration="400">We Are Your Friends and You are My
+        <p class="mt-4 md:text-2xl text-xl" data-aos="fade-right" data-aos-duration="400">We Are Your Friends and You are My
             Friend</p>
         <div data-aos="fade-right" data-aos-duration="500">
-            <a class="mt-6 inline-block button" href="#">Join Class</a>
+            <a class="mt-6 inline-block button-joinclass" href="#">Join Class</a>
         </div>
     </div>
 
@@ -28,7 +27,7 @@
 
         <img class="absolute  h-100% sm:block hidden obj3" src="{{ asset('assets/images/obj3.png') }}" />
         <div class="absolute right-32 bottom-0 h-75%">
-            <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/logokba.png') }}" />
+            <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/sertifikat.jpg') }}" />
 
 
         </div>
@@ -45,7 +44,43 @@
             style="
         left: 50%;
         transform: translate(-50%, -50px);">
-            <p class="text-center md:text-4xl text-2xl font-bold mb-16"> Kenapa harus belajar akuntansi / <br> pajak
+            <p class="text-4xl text-center mb-20" data-aos="fade-up" data-aos-duration="300"><span
+                    class="text-primary font-bold">Tentang </span> Kami
+            </p>
+
+            <div class="flex flex-row-reverse gap-10">
+
+                <div>
+                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">Teman
+                        Belajan
+                        Akuntansu
+                        dan Kawan Belajar Pajak merupakan media pembelajaran akuntansi dan perpajakan
+                        yang dimiliki oleh PT KINERJA BERKAH PRATAMA. Yang telah terdaftar di OSIS Nomor
+                        201022000568755
+                        dengan KBLI 85491, 85495 dan 85499.</p>
+                    <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3 ml-10">Berbekal
+                        dari
+                        pengalaman praktik kami bekerja di lapangan, kami mengajak teman-teman semuanya untuk
+                        bergabung dan belajar tentang akuntansi serta bagaimana penerapan akuntansi di lapangan.
+                        Kami
+                        berangkat dari banyak kegelisahan teman-teman baik siswa akuntansi, mahasiswa akuntansi,
+                        mahasiswa
+                        perpajakan dan juga yang sifatnya umum seperti pelaku UMKM yang masih kebingungan dalam
+                        pengelolaan
+                        keuangan usaha/bisnisnya.</p>
+                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">Oleh karena
+                        itu,
+                        harapan
+                        dan tujuan kita adalah memecahkan kegelisahan tersebut dengan cara membantu
+                        teman-teman semuanya. Arti teman/kawan belajar memiliki makna bahwa kita adalah teman kalian
+                        dan
+                        kalian adalah teman kita. Jadi anggap saja kita seperti teman dekat atau bahkan keluarga
+                        (tidak
+                        usah
+                        sungkan).</p>
+                </div>
+            </div>
+            {{-- <p class="text-center md:text-4xl text-2xl font-bold mb-16"> Kenapa harus belajar akuntansi / <br> pajak
                 bersama
                 <span class="text-primary "> kawan
                     pajak? </span>
@@ -98,12 +133,13 @@
                         terferivikasi
                     </p>
                 </div>
-            </div>
+            </div> --}}
+
         </section>
         {{-- OUR SERVICE --}}
 
 
-        <div class="md:h-96 h-0"></div>
+        <div class="md:h-pilihkelas h-0"></div>
 
         <section class="ourservice py-32 relative">
             <div class="flex justify-center">
@@ -388,7 +424,7 @@
 
     <a class="anchor" id="contact"></a>
 
-    <section class="kontak" class="mt-10">
+    {{-- <section class="kontak" class="mt-10">
 
         <div class="mx-auto container">
 
@@ -436,7 +472,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <section class="kontak" class="mt-10">
@@ -467,15 +503,15 @@
                         </div>
                         <div>
                             <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Whatsapp</p>
-                            <a class="text-center link font-bold block text-lg" href="https://wa.me/628975050520"
-                                target="_blank">0897-5050-520
+                            <a class="text-center link font-bold block text-lg" href="https://wa.me/6281336329811"
+                                target="_blank">0813-3632-9811
                             </a>
                         </div>
                         <div>
-                            <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Facebook</p>
+                            <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Instagram</p>
                             <a class="text-center link font-bold block text-lg"
-                                href="https://www.facebook.com/pembelajaranpajak/" target="_blank">KBP Facebook
-                            </a>
+                                href="https://www.instagram.com/kawanbelajarpajak/?hl=cs"
+                                target="_blank">@kawanbelajarpajak
                         </div>
                     </div>
                 </div>

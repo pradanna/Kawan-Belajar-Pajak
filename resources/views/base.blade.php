@@ -47,6 +47,7 @@
             <div class="container flex flex-wrap items-center justify-between mx-auto ">
                 <a class="flex items-center" href="/">
                     <img src="{{ asset('assets/icons/logo1.png') }}" class="h-6 mr-3 sm:h-10" alt="KBP Logo" />
+
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Kawan Belajar
                         Pajak</span>
                 </a>
@@ -147,7 +148,10 @@
 
                 </div>
                 <div>
-                    <img src="{{ asset('assets/icons/logo1.png') }}" />
+                    <div class="flex gap-4">
+                        <img src="{{ asset('assets/icons/logo1.png') }}" class="h-20" />
+                        <img src="{{ asset('assets/images/logokba.png') }}" class="h-20" alt="TBA Logo" />
+                    </div>
                     <p class="title mt-10">Credit</p>
                     <a class="py-2 px-4  hover:bg-black bg-gray-700 text-white rounded-2xl cursor-pointer transition-all duration-300"
                         data-modal-target="kreditModal" data-modal-toggle="kreditModal">Image Source </a>
