@@ -11,7 +11,7 @@ html {
 }
 
 .bg-secondary {
-  background-color: #f9c50d;
+  background-color: #ffa500;
 }
 
 .bg-secondary3 {
@@ -31,7 +31,7 @@ html {
 }
 
 .text-secondary {
-  color: #f9c50d;
+  color: #ffa500;
 }
 
 body {
@@ -132,7 +132,7 @@ a.anchor {
 }
 .ourservice .card:hover {
   scale: 1.1;
-  background-color: #f9c50d;
+  background-color: #ffa500;
 }
 
 .riwayat {
@@ -162,7 +162,7 @@ a.anchor {
 }
 
 .secondary-shadow {
-  box-shadow: 5px 5px 1px #f9c50d;
+  box-shadow: 5px 5px 1px #ffa500;
 }
 
 .history {
@@ -274,7 +274,7 @@ a.anchor {
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: #f9c50d;
+  background-color: #ffa500;
   color: white;
   border-radius: 10px;
   box-shadow: 5px 5px 1px #eee;
@@ -314,7 +314,7 @@ a.anchor {
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: orange;
+  background-color: #ffa500;
   color: white;
   border-radius: 10px;
   box-shadow: 5px 5px 1px #eee;
@@ -402,7 +402,7 @@ a.anchor {
   color: white;
 }
 .fasilitas p:nth-child(even) {
-  background-color: #f9c50d;
+  background-color: #ffa500;
   padding: 10px;
   color: white;
 }

@@ -51,10 +51,8 @@
             <div class="flex flex-row-reverse gap-10">
 
                 <div>
-                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">Teman
-                        Belajan
-                        Akuntansu
-                        dan Kawan Belajar Pajak merupakan media pembelajaran akuntansi dan perpajakan
+                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">LKP Kawan Belajar
+                        Pajak merupakan media pembelajaran akuntansi dan perpajakan
                         yang dimiliki oleh PT KINERJA BERKAH PRATAMA. Yang telah terdaftar di OSIS Nomor
                         201022000568755
                         dengan KBLI 85491, 85495 dan 85499.</p>

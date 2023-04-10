@@ -42,3 +42,35 @@ Route::get('/blog', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 });
+
+// ADMIN
+
+
+Route::get('/admin', function () {
+    return view('/admin/beranda/beranda');
+})->name('adminberanda');
+
+
+Route::get('/admin/tentang', function () {
+    return view('/admin/tentang/tentang');
+})->name('admintentang');
+
+Route::get('/admin/pendidikan', function () {
+    return view('/admin/tentang/pendidikan');
+})->name('adminpendidikan');
+
+Route::get('/admin/berita', function () {
+    return view('/admin/tentang/berita');
+})->name('adminberita');
+
+Route::get('/admin/testimoni', function () {
+    return view('/admin/tentang/testimoni');
+})->name('admintestimoni');
+
+Route::get('/admin/blog', function () {
+    return view('/admin/tentang/blog');
+})->name('adminblog');
+
+Route::get('/admin/kontak', function () {
+    return view('/admin/tentang/kontak');
+})->name('adminkontak');
