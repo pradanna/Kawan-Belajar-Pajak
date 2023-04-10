@@ -56,7 +56,7 @@
                         yang dimiliki oleh PT KINERJA BERKAH PRATAMA. Yang telah terdaftar di OSIS Nomor
                         201022000568755
                         dengan KBLI 85491, 85495 dan 85499.</p>
-                    <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3 ml-10">Berbekal
+                    <p class="md:text-lg text-xl   text-black bg-secondary  white-shadow mb-3  p-3 ml-10">Berbekal
                         dari
                         pengalaman praktik kami bekerja di lapangan, kami mengajak teman-teman semuanya untuk
                         bergabung dan belajar tentang akuntansi serta bagaimana penerapan akuntansi di lapangan.
