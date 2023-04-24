@@ -95,14 +95,14 @@
                 <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('admintentang') }}">
 
-                    <img src="{{ asset('local/icons/dashboard.svg') }}"
+                    <img src="{{ asset('local/icons/info.svg') }}"
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Tentang</p>
                 </a>
                 <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('adminpendidikan') }}">
 
-                    <img src="{{ asset('local/icons/dashboard.svg') }}"
+                    <img src="{{ asset('local/icons/book.svg') }}"
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Pendidikan</p>
                 </a>
@@ -110,34 +110,34 @@
                 <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('adminberita') }}">
 
-                    <img src="{{ asset('local/icons/dashboard.svg') }}"
+                    <img src="{{ asset('local/icons/news.svg') }}"
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Berita</p>
                 </a>
 
-                <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
+                {{-- <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('admintestimoni') }}">
 
                     <img src="{{ asset('local/icons/dashboard.svg') }}"
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Testimoni</p>
-                </a>
+                </a> --}}
 
                 <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('adminblog') }}">
 
-                    <img src="{{ asset('local/icons/dashboard.svg') }}"
+                    <img src="{{ asset('local/icons/feed.svg') }}"
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Blog</p>
                 </a>
 
-                <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
+                {{-- <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('adminkontak') }}">
 
                     <img src="{{ asset('local/icons/dashboard.svg') }}"
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Kontak</p>
-                </a>
+                </a> --}}
 
 
             </div>
