@@ -56,11 +56,11 @@ Route::get('/admin/tentang', function () {
 })->name('admintentang');
 
 Route::get('/admin/pendidikan', function () {
-    return view('/admin/tentang/pendidikan');
+    return view('/admin/pendidikan/pendidikan');
 })->name('adminpendidikan');
 
 Route::get('/admin/berita', function () {
-    return view('/admin/tentang/berita');
+    return view('/admin/berita/berita');
 })->name('adminberita');
 
 Route::get('/admin/testimoni', function () {
@@ -68,9 +68,9 @@ Route::get('/admin/testimoni', function () {
 })->name('admintestimoni');
 
 Route::get('/admin/blog', function () {
-    return view('/admin/tentang/blog');
+    return view('/admin/blog/blog');
 })->name('adminblog');
 
 Route::get('/admin/kontak', function () {
-    return view('/admin/tentang/kontak');
+    return view('/admin/kontak/kontak');
 })->name('adminkontak');
