@@ -32,7 +32,7 @@
             <div class=" p-5 mt-3">
                 <div class="flex gap-5">
                     <p class="flex-grow">BLog</p>
-                    <button data-modal-target="modalberita" data-modal-toggle="modalberita"
+                    <button data-modal-target="modalblog" data-modal-toggle="modalblog"
                         class="font-bold  p-2 bg-green-600 rounded-md text-white transition-all duration-300  hover:bg-green-400"
                         type="button">Tambah
                         Data</button>
@@ -93,7 +93,7 @@
                                 </td>
 
                                 <td class="px-6 py-4 h-full relative  w-52">
-                                    <a type="button" data-modal-target="modalberita" data-modal-toggle="modalberita"
+                                    <a type="button" data-modal-target="modalblog" data-modal-toggle="modalblog"
                                         class="font-bold cursor-pointer p-2 mr-2 bg-blue-600 rounded-md text-white transition-all duration-300  hover:bg-blue-400">Edit</a>
                                     <a href="#"
                                         class="font-bold p-2 bg-red-600 rounded-md text-white transition-all duration-300  hover:bg-red-400">Hapus</a>
@@ -111,7 +111,7 @@
 
 
         <!-- Main modal -->
-        <div id="modalberita" tabindex="-1" aria-hidden="true"
+        <div id="modalblog" tabindex="-1" aria-hidden="true"
             class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
             <div class="relative w-full h-full max-w-6xl md:h-auto">
                 <!-- Modal content -->
@@ -123,7 +123,7 @@
                         </h3>
                         <button type="button"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                            data-modal-hide="modalberita">
+                            data-modal-hide="modalblog">
                             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -136,19 +136,19 @@
                     <!-- Modal body -->
                     <div class="p-6 space-y-6">
                         <div class="mb-6">
-                            <label for="judulberita"
+                            <label for="judulblog"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul
                                 Blog
                             </label>
-                            <input type="text" id="judulberita"
+                            <input type="text" id="judulblog"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 placeholder="">
                         </div>
                         <div class="mb-6 mt-6">
-                            <label for="isiberita" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi
+                            <label for="isiblog" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isi
                                 Blog
                             </label>
-                            <div id="isiberita" class="h-32">
+                            <div id="isiblog" class="h-32">
                             </div>
                         </div>
                         <div class="mb-6 mt-6">
@@ -173,7 +173,7 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                        <button data-modal-hide="modalberita" type="button" data-modal-target="modalberita"
+                        <button data-modal-hide="modalblog" type="button" data-modal-target="modalblog"
                             class="flex-grow text-white bg-blue-700 min-h-32 text-center hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg px-5 py-5 text-xl">Simpan</button>
                     </div>
 
@@ -196,7 +196,7 @@
     </script>
 
     <script>
-        var sejarah = new Quill('#isiblog', {
+        var blog = new Quill('#isiblog', {
             theme: 'snow' // Specify theme in configuration
         });
     </script>
