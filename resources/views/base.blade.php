@@ -30,6 +30,7 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js"></script>
 
+
     @yield('morecss')
 </head>
 
@@ -237,7 +238,6 @@
 
     {{-- SLIDER RIWAYAT --}}
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
     <script>
         new Splide('.splide', {
             type: 'loop',
@@ -263,6 +263,7 @@
     {{-- FLOWBITE --}}
 
     @yield('morejs')
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
     {{-- <script>
         document.addEventListener('DOMContentLoaded', function() {

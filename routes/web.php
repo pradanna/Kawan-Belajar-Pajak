@@ -46,14 +46,15 @@ Route::get('/kontak', function () {
 // ADMIN
 
 
-Route::get('/admin', function () {
-    return view('/admin/beranda/beranda');
-})->name('adminberanda');
+Route::prefix('admin')->group(function (){
+    Route::match(['GET','POST'],'', [\App\Http\Controllers\DashboardController::class,'index'])->name('adminberanda');
+
+    Route::get('/tentang', function () {
+        return view('/admin/tentang/tentang');
+    })->name('admintentang');
+});
 
 
-Route::get('/admin/tentang', function () {
-    return view('/admin/tentang/tentang');
-})->name('admintentang');
 
 Route::get('/admin/pendidikan', function () {
     return view('/admin/pendidikan/pendidikan');
