@@ -15,9 +15,9 @@ class CreateAboutsTable extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            $table->text('history')->nullable(true)->default(null);
-            $table->text('viion')->nullable(true)->default(null);
-            $table->text('mission')->nullable(true)->default(null);
+            $table->longText('history')->nullable(true)->default(null);
+            $table->longText('vision')->nullable(true)->default(null);
+            $table->longText('mission')->nullable(true)->default(null);
             $table->timestamps();
         });
     }

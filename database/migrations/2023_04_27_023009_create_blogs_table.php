@@ -18,8 +18,7 @@ class CreateBlogsTable extends Migration
             $table->string('title');
             $table->longText('content');
             $table->date('date');
-            $table->bigInteger('author')->unsigned();
-            $table->foreign('author')->references('id')->on('users');
+            $table->string('author')->nullable(true);
             $table->timestamps();
         });
     }

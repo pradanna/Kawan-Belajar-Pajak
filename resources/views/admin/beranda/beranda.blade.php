@@ -4,7 +4,6 @@
     <link href="{{ asset('js/admin/dropify/css/dropify.css') }}" rel="stylesheet">
 
 @endsection
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 @section('content')
     @if (\Illuminate\Support\Facades\Session::has('failed'))
@@ -136,31 +135,13 @@
                 }
             });
 
-            dropImage = icon.data('dropify');
-            dropImage.resetPreview();
-            dropImage.clearElement();
-            dropImage.settings.defaultFile = employee['image'];
-            dropImage.destroy();
-            dropImage.init();
+            // dropImage = icon.data('dropify');
+            // dropImage.resetPreview();
+            // dropImage.clearElement();
+            // dropImage.settings.defaultFile = employee['image'];
+            // dropImage.destroy();
+            // dropImage.init();
         })
-
-        function saveData(text, form) {
-            Swal.fire({
-                title: 'Konfirmasi',
-                icon: 'info',
-                text: text,
-                showCloseButton: true,
-                showCancelButton: true,
-                focusConfirm: false,
-            }).then(function (result) {
-                if (result.isConfirmed) {
-                    $('#' + form).submit();
-                }
-
-            });
-            return false;
-
-        }
 
         function saveAbout() {
             // let s = quill.container.firstChild.innerHTML;
