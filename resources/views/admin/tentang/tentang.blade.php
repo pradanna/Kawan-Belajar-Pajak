@@ -55,7 +55,7 @@
 
                 <form id="formSejarah" method="POST">
                     @csrf
-                    <input id="txtHistory" name="history">
+                    <input id="txtHistory" name="history" hidden>
 
                     <div id="sejarah" class="h-32">
 
@@ -82,7 +82,7 @@
 
                     <form id="formVisi" method="POST">
                         @csrf
-                        <input id="txtVision" name="vision">
+                        <input id="txtVision" name="vision" hidden>
 
                         <div id="visi" class="h-32">
 
@@ -104,7 +104,7 @@
                     <form id="formMisi" method="POST">
                         @csrf
 
-                        <input id="txtMission" name="mission">
+                        <input id="txtMission" name="mission" hidden>
 
                         <div id="misi" class="h-32">
 
