@@ -135,12 +135,12 @@
                 }
             });
 
-            // dropImage = icon.data('dropify');
-            // dropImage.resetPreview();
-            // dropImage.clearElement();
-            // dropImage.settings.defaultFile = employee['image'];
-            // dropImage.destroy();
-            // dropImage.init();
+            dropImage = dropImage.data('dropify');
+            dropImage.resetPreview();
+            dropImage.clearElement();
+            dropImage.settings.defaultFile = '{{$data ? $data->image : ''}}';
+            dropImage.destroy();
+            dropImage.init();
         })
 
         function saveAbout() {
