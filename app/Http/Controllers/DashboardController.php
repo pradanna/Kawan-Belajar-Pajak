@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dashboard;
+use App\Models\Student;
 
 class DashboardController extends Controller
 {
@@ -27,4 +28,13 @@ class DashboardController extends Controller
 
     }
 
+    public function welcome_page()
+    {
+        $hero = Dashboard::firstOrFail();
+        $testimony = Student::all();
+        return view('welcome')->with([
+            'hero' => $hero,
+            'testimony' => $testimony
+        ]);
+    }
 }
