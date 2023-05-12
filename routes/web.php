@@ -30,9 +30,7 @@ Route::get(
 
 Route::get(
     '/berita',
-    function () {
-        return view('berita');
-    }
+    [\App\Http\Controllers\NewsController::class, 'news_page']
 );
 
 Route::get(
