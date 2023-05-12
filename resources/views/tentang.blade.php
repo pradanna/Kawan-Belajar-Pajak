@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="bg-white min-h-20" style="margin-top: -2rem; margin-left: 2rem">
-                    <div class="p-10">{!! $data->history !!}</div>
+                    <div class="p-10">{!! $about->history !!}</div>
                 </div>
             </div>
         </section>
@@ -63,7 +63,7 @@
                             <div class="h-3 w-3 bg-white mt-2"></div>
                         </div>
                         <div class="bg-primary min-h-20" style="margin-top: -2rem; margin-left: 2rem">
-                            <div class="p-10 text-white">{!! $data->vision !!}</div>
+                            <div class="p-10 text-white">{!! $about->vision !!}</div>
                         </div>
                     </div>
                     <div>
@@ -76,7 +76,7 @@
                             <div class="h-3 w-3 bg-white mt-2"></div>
                         </div>
                         <div class="bg-primary min-h-20" style="margin-top: -2rem; margin-left: 2rem">
-                            <div class="p-10 text-white">{!! $data->mission !!}</div>
+                            <div class="p-10 text-white">{!! $about->mission !!}</div>
                         </div>
                     </div>
 

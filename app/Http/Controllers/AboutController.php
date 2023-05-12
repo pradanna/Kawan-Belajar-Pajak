@@ -85,9 +85,9 @@ class AboutController extends CustomController
 
     public function about_page()
     {
-        $data = About::firstOrFail();
+        $about = About::firstOrFail();
         $team = Team::all();
         $students = Student::all();
-        return view('tentang')->with(['data' => $data, 'teams' => $team, 'students' => $students]);
+        return view('tentang')->with(['about' => $about, 'teams' => $team, 'students' => $students]);
     }
 }

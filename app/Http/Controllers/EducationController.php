@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Education;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
@@ -97,5 +98,25 @@ class EducationController extends Controller
                                        class=\"deleteData font-bold p-2 bg-red-600 rounded-md text-white transition-all duration-300  hover:bg-red-400\">Hapus</a>";
                              }
                          )->rawColumns(['action'])->make(true);
+    }
+
+    public function education_page()
+    {
+        $about = About::firstOrFail();
+        $educations_offline = Education::where('type', '=', 0)->get();
+        $educations_online = Education::where('type', '=', 1)->get();
+        $tax_online = Education::where('type', '=', 2)->get();
+        $tax_offline = Education::where('type', '=', 3)->get();
+        $facilities = Education::where('type', '=', 4)->get();
+        $benefits = Education::where('type', '=', 5)->get();
+        return view('Pendidikan')->with([
+            'about' => $about,
+            'educations_offline' => $educations_offline,
+            'educations_online' => $educations_online,
+            'tax_online' => $tax_online,
+            'tax_offline' => $tax_offline,
+            'facilities' => $facilities,
+            'benefits' => $benefits,
+        ]);
     }
 }

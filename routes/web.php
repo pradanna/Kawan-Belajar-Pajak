@@ -25,9 +25,7 @@ Route::get(
 
 Route::get(
     '/pendidikan',
-    function () {
-        return view('pendidikan');
-    }
+    [\App\Http\Controllers\EducationController::class, 'education_page']
 );
 
 Route::get(
