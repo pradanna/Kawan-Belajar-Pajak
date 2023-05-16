@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Blog;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
@@ -83,4 +84,13 @@ class BlogController extends Controller
                          )->rawColumns(['action','content'])->make(true);
     }
 
+    public function blog_page()
+    {
+        $about = About::firstOrFail();
+        $blogs = Blog::with([])->orderBy('created_at', 'DESC')->get();
+        return view('blog')->with([
+            'about' => $about,
+            'blogs' => $blogs
+        ]);
+    }
 }

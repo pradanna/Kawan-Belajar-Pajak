@@ -35,23 +35,17 @@ Route::get(
 
 Route::get(
     '/testimoni',
-    function () {
-        return view('testimoni');
-    }
+    [\App\Http\Controllers\StudentController::class, 'testimony_page']
 );
 
 Route::get(
     '/blog',
-    function () {
-        return view('blog');
-    }
+    [\App\Http\Controllers\BlogController::class, 'blog_page']
 );
 
 Route::get(
     '/kontak',
-    function () {
-        return view('kontak');
-    }
+    [\App\Http\Controllers\ContactController::class, 'contact_Page']
 );
 
 // ADMIN

@@ -26,7 +26,7 @@
 
         <img class="absolute  h-100% sm:block hidden obj3" src="{{ asset('assets/images/obj3.png') }}"/>
         <div class="absolute right-32 bottom-0 h-75%">
-            <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/sertifikat.jpg') }}"/>
+            <img class=" object-bottom object-contain h-full" src="{{ $hero->image }}"/>
 
 
         </div>

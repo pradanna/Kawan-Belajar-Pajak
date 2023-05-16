@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helper\CustomController;
+use App\Models\About;
 use App\Models\Student;
 
 /**
@@ -63,4 +64,13 @@ class StudentController extends CustomController
         return 'success';
     }
 
+    public function testimony_page()
+    {
+        $about = About::firstOrFail();
+        $students = Student::with([])->orderBy('created_at', 'DESC')->get();
+        return view('testimoni')->with([
+            'about' => $about,
+            'students' => $students
+        ]);
+    }
 }
