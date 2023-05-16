@@ -43,37 +43,37 @@
                 <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
                     data-tabs-toggle="#myTabContent" role="tablist">
                     <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="akuntansioffline-tab" onclick="setModalType(0)"
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="akuntansioffline-tab" onclick="setModalType(0, this)"
                                 data-tabs-target="#akuntansioffline" type="button" role="tab"
                                 aria-controls="akuntansioffline" aria-selected="false">Akuntansi Offline
                         </button>
                     </li>
                     <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(1)"
+                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(1, this)"
                                 id="akuntansionline-tab" data-tabs-target="#akuntansionline" type="button" role="tab"
                                 aria-controls="akuntansionline" aria-selected="false">Akuntansi Online
                         </button>
                     </li>
                     <li class="mr-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(2)"
+                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(2, this)"
                                 id="pajakoffline-tab" data-tabs-target="#pajakoffline" type="button" role="tab"
                                 aria-controls="pajakoffline" aria-selected="false">Pajak Offline
                         </button>
                     </li>
                     <li role="presentation">
-                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(3)"
+                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(3, this)"
                                 id="pajakonline-tab" data-tabs-target="#pajakonline" type="button" role="tab"
                                 aria-controls="pajakonline" aria-selected="false">Pajak Online
                         </button>
                     </li>
                     <li role="presentation">
-                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(4)"
+                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(4, this)"
                                 id="fasilitas-tab" data-tabs-target="#fasilitas" type="button" role="tab"
                                 aria-controls="fasilitas" aria-selected="false">Fasilitas
                         </button>
                     </li>
                     <li role="presentation">
-                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(5)"
+                        <button class="inline-block p-4 border-b-2  rounded-t-lg hover:text-gray-600 hover:border-gray-300" onclick="setModalType(5, this)"
                                 id="benefit-tab" data-tabs-target="#benefit" type="button" role="tab"
                                 aria-controls="benefit" aria-selected="false">Benefit
                         </button>
@@ -314,7 +314,7 @@
                 <!-- Modal header -->
                 <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Tambah Data
+                        Tambah Data <span id="txtPendidikan"></span>
                     </h3>
                     <button type="button" onclick="modalles.hide()"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -437,6 +437,8 @@
     <script>
         let modalTyp = 0;
         $('#modalles #type').val(modalTyp);
+        $('#modalles #txtPendidikan').html('Akuntansi Offline');
+
 
         const targetModalles = document.getElementById('modalles');
         let modalles = new Modal(targetModalles, {
@@ -459,8 +461,9 @@
             showDatatable(5);
         })
 
-        function setModalType(a) {
+        function setModalType(a, data) {
             modalTyp = a;
+            $('#modalles #txtPendidikan').html($(data).html());
             $('#modalles #type').val(a);
         }
 

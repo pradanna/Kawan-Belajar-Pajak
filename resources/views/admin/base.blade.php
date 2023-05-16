@@ -71,10 +71,10 @@
                 <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow ">
                     <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownDefault">
 
-                        <a class="block py-2 px-4 text-xs   text-black/30 ">Username</a>
+                        <a class="block py-2 px-4 text-xs   ">Hi, {{auth()->user()->name}}</a>
                         <div class="divide-y-2"></div>
                         <li>
-                            <a class="block py-2 px-4 hover:bg-gray-100  text-red-600 cursor-pointer">Sign
+                            <a class="block py-2 px-4 hover:bg-gray-100  text-red-600 cursor-pointer" href="/logout">Sign
                                 out</a>
                         </li>
                     </ul>
@@ -137,6 +137,14 @@
                     <p class="title-menu block menu-text">Blog</p>
                 </a>
 
+                @if(auth()->user()->role == 'administrator')
+                    <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
+                       href="{{ route('administrator') }}">
+                        <img src="{{ asset('local/icons/feed.svg') }}"
+                             class=" mr-2 menu-icon text-sm w-6 object-scale-down">
+                        <p class="title-menu block menu-text">Administrator</p>
+                    </a>
+                @endif
                 {{-- <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('adminkontak') }}">
 
@@ -144,8 +152,6 @@
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Kontak</p>
                 </a> --}}
-
-
             </div>
         </div>
 

@@ -56,7 +56,7 @@ Route::get(
 
 // ADMIN
 
-Route::prefix('admin')->group(
+Route::prefix('admin')->middleware('auth')->group(
     function () {
         Route::match(['GET', 'POST'], '', [\App\Http\Controllers\DashboardController::class, 'index'])->name('adminberanda');
 
@@ -103,8 +103,19 @@ Route::prefix('admin')->group(
             }
         );
 
+        Route::prefix('administrator')->middleware(\App\Http\Middleware\Administrator::class)->group(
+            function () {
+                Route::match(['GET', 'POST'], '', [\App\Http\Controllers\AdminController::class, 'index'])->name('administrator');
+                Route::post('/{id}/delete', [\App\Http\Controllers\AdminController::class, 'delete'])->name('administrator.delete');
+                Route::get('datatable', [\App\Http\Controllers\AdminController::class, 'datatable'])->name('administrator.datatable');
+            }
+        );
     }
 );
+
+Route::match(['POST','GET'],'/login',[\App\Http\Controllers\LoginController::class,'login'])->name('login');
+Route::get('/logout',[\App\Http\Controllers\LoginController::class,'logout'])->name('logout');
+
 
 
 Route::get(
