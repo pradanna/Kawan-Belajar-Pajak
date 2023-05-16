@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Helper\CustomController;
 use App\Models\About;
 use App\Models\LearningEnvironment;
+use App\Models\Student;
+use App\Models\Team;
 
 /**
  * Class AboutController
@@ -81,4 +83,11 @@ class AboutController extends CustomController
         return $data;
     }
 
+    public function about_page()
+    {
+        $about = About::firstOrFail();
+        $team = Team::all();
+        $students = Student::all();
+        return view('tentang')->with(['about' => $about, 'teams' => $team, 'students' => $students]);
+    }
 }

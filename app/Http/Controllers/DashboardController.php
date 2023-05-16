@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Helper\CustomController;
+use App\Models\About;
 use App\Models\Dashboard;
+use App\Models\Student;
 
 class DashboardController extends CustomController
 {
-    public function index(){
-        if (request()->isMethod('POST')){
+    public function index()
+    {
+        if (request()->isMethod('POST')) {
             return $this->postData();
         }
         $data = Dashboard::first();
@@ -16,22 +18,23 @@ class DashboardController extends CustomController
         return view('/admin/beranda/beranda', ['data' => $data]);
     }
 
-    public function postData(){
+    public function postData()
+    {
         $data = Dashboard::first();
 
         $oldImg          = null;
         $imageName       = $this->generateImageName('image');
-        $destinationPath = public_path().'/assets/images/news';
+        $destinationPath = public_path() . '/assets/images/news';
         $field = request()->all();
         $field['author'] = request('author') ?? "anonymous";
         if (request()->has('image')) {
-            $field['image'] = '/assets/images/news/'.$imageName;
+            $field['image'] = '/assets/images/news/' . $imageName;
         }
-        if ($data){
+        if ($data) {
             $oldImg = $data->image;
 
             $data->update($field);
-        }else{
+        } else {
             Dashboard::create($field);
         }
 
@@ -42,7 +45,17 @@ class DashboardController extends CustomController
         }
 
         return redirect()->back()->with('success', "berhasil update data...");
-
     }
 
+    public function welcome_page()
+    {
+        $hero = Dashboard::firstOrFail();
+        $about = About::firstOrFail();
+        $testimony = Student::all();
+        return view('welcome')->with([
+            'hero' => $hero,
+            'testimony' => $testimony,
+            'about' => $about
+        ]);
+    }
 }

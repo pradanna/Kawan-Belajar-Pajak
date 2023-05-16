@@ -15,23 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get(
     '/',
-    function () {
-        return view('welcome');
-    }
+    [\App\Http\Controllers\DashboardController::class, 'welcome_page']
 );
 
 Route::get(
     '/tentang',
-    function () {
-        return view('tentang');
-    }
+    [\App\Http\Controllers\AboutController::class, 'about_page']
 );
 
 Route::get(
     '/pendidikan',
-    function () {
-        return view('pendidikan');
-    }
+    [\App\Http\Controllers\EducationController::class, 'education_page']
 );
 
 Route::get(
