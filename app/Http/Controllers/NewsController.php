@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helper\CustomController;
+use App\Models\About;
 use App\Models\News;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
@@ -102,4 +103,10 @@ class NewsController extends CustomController
                          )->rawColumns(['action','content'])->make(true);
     }
 
+    public function news_page()
+    {
+        $about = About::firstOrFail();
+        $news = News::orderBy('created_at', 'DESC')->get();
+        return view('berita')->with(['about' => $about, 'news' => $news]);
+    }
 }
