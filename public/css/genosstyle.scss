@@ -449,6 +449,28 @@ a.anchor {
   }
 }
 
+.tentangkamidashboard {
+  p:nth-child(odd) {
+    background: $primary-color;
+    box-shadow: 5px 5px 1px white;
+    padding: 30px;
+    margin-right: 50px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p:nth-child(even) {
+    background: $primary-secondary;
+    box-shadow: 5px 5px 1px white;
+    padding: 30px;
+    margin-left: 50px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
+
 .berita {
   section:nth-child(odd) {
     flex-direction: row;

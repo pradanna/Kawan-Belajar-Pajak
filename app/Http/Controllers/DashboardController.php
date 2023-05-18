@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Helper\CustomController;
-use App\Models\Dashboard;
 use App\Models\Student;
+use App\Models\Dashboard;
 
 class DashboardController extends CustomController
 {

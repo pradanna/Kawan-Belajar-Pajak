@@ -38,6 +38,8 @@
     {{-- <div id="loading" class="z-50 fixed h-full w-full bg-blue flex justify-center items-center">
         <img src="{{ asset('assets/images/loading.gif') }}" />
     </div> --}}
+
+
     <div class="">
 
 
@@ -98,12 +100,18 @@
 
 
 
+
         <footer class="footer  ">
             <div class="container grid md:grid-cols-3 grid-cols-1 gap-10 md:mx-auto md:px-0 px-5">
                 <div class="md:col-span-2">
 
                     <p class="title ">Sejarah Singkat</p>
                     <div class="content text-sm">{!! $about->history !!}</div>
+
+                    <div class="flex gap-4 mt-14">
+                        <img src="{{ asset('assets/icons/logo1.png') }}" class="h-20" />
+                        <img src="{{ asset('assets/images/logokba.png') }}" class="h-20" alt="TBA Logo" />
+                    </div>
                 </div>
                 <div>
                     <p class="title">Menu</p>
@@ -134,13 +142,6 @@
                             </path>
                         </svg></a>
 
-
-                </div>
-                <div>
-                    <div class="flex gap-4">
-                        <img src="{{ asset('assets/icons/logo1.png') }}" class="h-20" />
-                        <img src="{{ asset('assets/images/logokba.png') }}" class="h-20" alt="TBA Logo" />
-                    </div>
                     <p class="title mt-10">Credit</p>
                     <a class="py-2 px-4  hover:bg-black bg-gray-700 text-white rounded-2xl cursor-pointer transition-all duration-300"
                         data-modal-target="kreditModal" data-modal-toggle="kreditModal">Image Source </a>
@@ -149,10 +150,14 @@
 
 
 
+
             </div>
         </footer>
     </div>
 
+    <div style="bottom: 20px; right: 20px;" class="fixed   ">
+        <a href="https://wa.link/kcbooc"> <img src="{{ asset('assets/images/iconwa.png') }}" class="w-14 h-14" /></a>
+    </div>
     <!-- Main modal -->
     <div id="kreditModal" tabindex="-1" aria-hidden="true"
         class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">

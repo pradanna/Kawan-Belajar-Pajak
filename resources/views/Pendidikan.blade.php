@@ -23,53 +23,54 @@
 
             <div class="container  grid md:grid-cols-4 grid-cols-1 p-5 gap-10 mx-auto">
 
-                <div data-aos="fade-up" data-aos-duration="600">
+                <a data-aos="fade-up" data-aos-duration="600" href="#akuntansi">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
+                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                             src="{{ asset('/assets/images/accounting.png') }}"/>
+                            src="{{ asset('/assets/images/accounting.png') }}" />
                         <p class="text-center mt-3 text-lg font-medium leading-5">AKUNTANSI</p>
                     </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="700">
+                </a>
+                <a data-aos="fade-up" data-aos-duration="700" href="#pajak">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
+                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                             src="{{ asset('/assets/images/tax.png') }}"/>
+                            src="{{ asset('/assets/images/tax.png') }}" />
                         <p class="text-center mt-3 text-lg font-medium leading-5">PAJAK
                         </p>
                     </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600">
+                </a>
+                <a data-aos="fade-up" data-aos-duration="600" href="#fasilitas">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
+                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                             src="{{ asset('/assets/images/welfare.png') }}"/>
+                            src="{{ asset('/assets/images/welfare.png') }}" />
                         <p class="text-center mt-3 text-lg font-medium leading-5">FASILITAS
                     </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="700">
+                </a>
+                <a data-aos="fade-up" data-aos-duration="700" href="#benefit">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
-                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
+                        x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
-                             src="{{ asset('/assets/images/incentive.png') }}"/>
+                            src="{{ asset('/assets/images/incentive.png') }}" />
                         <p class="text-center mt-3 text-lg font-medium leading-5">BENEFIT
                         </p>
                     </div>
-                </div>
+                </a>
+
             </div>
 
 
         </section>
 
-        <section class="container mx-auto">
-            <div class="flex items-end border-b-2">
+        <section class="container mx-auto" id="akuntansi">
+            <div class="flex items-end border-b-2 border-black">
                 <div class="p-2">
                     <img class="h-12 icon object-contain" :class="hover ? 'hovered' : ''"
-                         src="{{ asset('/assets/images/accountingw.png') }}"/>
+                        src="{{ asset('/assets/images/accounting.png') }}" />
                 </div>
 
-                <p class="text-2xl text-white font-bold">Akuntansi</p>
+                <p class="text-2xl text-black font-bold">Akuntansi</p>
             </div>
 
             <div>
@@ -78,7 +79,7 @@
                         AKUNTANSI OFFLINE</p>
                 </div>
                 <div class="grid grid-cols-3 gap-8 mt-10">
-                    @foreach($educations_offline as $eo)
+                    @foreach ($educations_offline as $eo)
                         <div class="bg-white p-3 secondary-shadow">
                             <p class="font-bold pb-2">{{ $eo->name }}</p>
                             <hr>
@@ -104,7 +105,7 @@
                 </div>
                 <div class="grid grid-cols-3 gap-8 mt-10">
 
-                    @foreach($educations_online as $eon)
+                    @foreach ($educations_online as $eon)
                         <div class="bg-white p-3 secondary-shadow">
                             <p class="font-bold pb-2">{{ $eon->name }}</p>
                             <hr>
@@ -126,14 +127,14 @@
 
         </section>
 
-        <section class="container mx-auto mt-32">
-            <div class="flex items-end border-b-2">
+        <section class="container mx-auto mt-32" id="pajak">
+            <div class="flex items-end border-b-2 border-black">
                 <div class="p-2">
                     <img class="h-12 icon object-contain" :class="hover ? 'hovered' : ''"
-                         src="{{ asset('/assets/images/taxw.png') }}"/>
+                        src="{{ asset('/assets/images/tax.png') }}" />
                 </div>
 
-                <p class="text-2xl text-white font-bold">Pajak</p>
+                <p class="text-2xl text-black font-bold">Pajak</p>
             </div>
 
             <div>
@@ -143,8 +144,7 @@
                         OFFLINE</p>
                 </div>
                 <div class="grid grid-cols-3 gap-8 mt-10">
-                    @foreach($tax_offline as $to)
-
+                    @foreach ($tax_offline as $to)
                         <div class="bg-white p-3 secondary-shadow">
                             <p class="font-bold pb-2">{{ $to->name }}</p>
                             <hr>
@@ -170,8 +170,7 @@
                         ONLINE</p>
                 </div>
                 <div class="grid grid-cols-3 gap-8 mt-10">
-                    @foreach($tax_online as $ton)
-
+                    @foreach ($tax_online as $ton)
                         <div class="bg-white p-3 secondary-shadow">
                             <p class="font-bold pb-2">{{ $ton->name }}</p>
                             <hr>
@@ -193,35 +192,35 @@
 
         </section>
 
-        <section class="container mx-auto mt-32">
-            <div class="flex items-end border-b-2">
+        <section class="container mx-auto mt-32" id="fasilitas">
+            <div class="flex items-end border-b-2 border-black">
                 <div class="p-2">
                     <img class="h-12 icon object-contain" :class="hover ? 'hovered' : ''"
-                         src="{{ asset('/assets/images/welfarew.png') }}"/>
+                        src="{{ asset('/assets/images/welfare.png') }}" />
                 </div>
 
-                <p class="text-2xl text-white font-bold">Fasilitas</p>
+                <p class="text-2xl text-black font-bold">Fasilitas</p>
             </div>
 
             <div class="fasilitas">
-                @foreach($facilities as $f)
+                @foreach ($facilities as $f)
                     <p class="white-shadow my-5">{{ $f->description }}</p>
                 @endforeach
             </div>
         </section>
 
-        <section class="container mx-auto mt-32">
-            <div class="flex items-end border-b-2">
+        <section class="container mx-auto mt-32" id="benefit">
+            <div class="flex items-end border-b-2 border-black">
                 <div class="p-2">
                     <img class="h-12 icon object-contain" :class="hover ? 'hovered' : ''"
-                         src="{{ asset('/assets/images/incentivew.png') }}"/>
+                        src="{{ asset('/assets/images/incentive.png') }}" />
                 </div>
 
-                <p class="text-2xl text-white font-bold">Benefit</p>
+                <p class="text-2xl text-black font-bold">Benefit</p>
             </div>
 
             <div class="fasilitas">
-                @foreach($benefits as $b)
+                @foreach ($benefits as $b)
                     <p class="white-shadow my-5">{{ $b->description }}</p>
                 @endforeach
             </div>
@@ -230,9 +229,9 @@
 
         <div class=" overflow-hidden">
             <img class="absolute  h-100% sm:block hidden " style="right: -30rem; top: -10rem"
-                 src="{{ asset('assets/images/obj1.png') }}"/>
+                src="{{ asset('assets/images/obj1.png') }}" />
             <img class="absolute  h-32 sm:block hidden top-36 right-20 "
-                 src="{{ asset('assets/images/planepaperwhite.png') }}"/>
+                src="{{ asset('assets/images/planepaperwhite.png') }}" />
         </div>
 
 
