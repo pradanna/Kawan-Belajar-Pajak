@@ -70,7 +70,6 @@ Route::prefix('admin')->middleware('auth')->group(
                     }
                 );
                 Route::match(['GET', 'POST'], 'image', [\App\Http\Controllers\AboutController::class, 'image'])->name('admintentang.image');
-
             }
         );
         Route::prefix('pendidikan')->group(
@@ -107,8 +106,8 @@ Route::prefix('admin')->middleware('auth')->group(
     }
 );
 
-Route::match(['POST','GET'],'/login',[\App\Http\Controllers\LoginController::class,'login'])->name('login');
-Route::get('/logout',[\App\Http\Controllers\LoginController::class,'logout'])->name('logout');
+Route::match(['POST', 'GET'], '/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('login');
+Route::get('/logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
 
 
 
