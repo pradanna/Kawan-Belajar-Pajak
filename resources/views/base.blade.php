@@ -11,7 +11,6 @@
     <link href="{{ asset('css/genosstyle.css') }} " rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
-
     {{-- AOS JS --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Fonts -->
@@ -30,7 +29,7 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js"></script>
 
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     @yield('morecss')
 </head>
 
@@ -231,6 +230,8 @@
 
     {{-- SLIDER RIWAYAT --}}
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
     <script>
         new Splide('.splide', {
             type: 'loop',
@@ -257,7 +258,6 @@
 
     @yield('morejs')
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
     {{-- <script>
         document.addEventListener('DOMContentLoaded', function() {
             var load = document.getElementById("loading");

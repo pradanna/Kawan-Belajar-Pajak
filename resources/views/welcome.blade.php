@@ -1,6 +1,36 @@
 @extends('base')
 
 @section('content')
+    <!-- Modal toggle -->
+
+
+    <!-- Main modal -->
+    <div id="popup" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" data-modal-target="popup"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-4xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+
+                <!-- Modal body -->
+                <div class="w-full">
+                    <button type="button" onclick="closepopup()"
+                        class="absolute top-4 right-4 bg-transparent text-white hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="popup">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <img class="w-full object-fill"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsWdrocA7y8R71s_brcNN8d9uQggBdWZ7Frg&usqp=CAU" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     {{-- Headline --}}
     <div class="absolute md:left-28 md:top-1/4 md:w-1/3 top-36 left-5 right-5 z-20">
         <p class="md:text-7xl text-xl font-bold leading-snug text-black " data-aos="fade-right" data-aos-duration="300">
@@ -17,6 +47,7 @@
         src="{{ asset('assets/images/planepaperwhite.png') }}" />
     {{-- HERO --}}
     <section class="hero  " id="beranda">
+
 
 
         <img class="absolute  h-100% sm:block hidden obj1" src="{{ asset('assets/images/obj1.png') }}" />
@@ -511,4 +542,36 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('morejs')
+    <script>
+        // set the modal menu element
+        const $targetEl = document.getElementById('popup');
+
+        // options with default values
+        const options = {
+
+            closable: true,
+            onHide: () => {
+                console.log('modal is hidden');
+            },
+            onShow: () => {
+                console.log('modal is shown');
+            },
+            onToggle: () => {
+                console.log('modal has been toggled');
+            }
+        };
+        const modal = new Modal($targetEl, options);
+
+        // A $( document ).ready() block.
+        document.addEventListener("DOMContentLoaded", () => {
+            modal.show();
+        });
+
+        function closepopup() {
+            modal.hide();
+        }
+    </script>
 @endsection

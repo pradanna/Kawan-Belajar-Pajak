@@ -15,12 +15,10 @@
 
 
         <div class="berita ">
-            @foreach($news as $key => $v)
-                @if($key % 2 === 0)
+            @foreach ($news as $key => $v)
+                @if ($key % 2 === 0)
                     <section class="container mx-auto flex gap-4 bg-white bg-opacity-50 z-20 relative items-stretch">
-                        <img
-                            src="{{ $v->image }}"
-                            class="w-1/3 object-cover min-h-50  flex-none"/>
+                        <img src="{{ $v->image }}" class="w-1/3 object-cover min-h-50  flex-none" />
                         <div class="p-5 " style="flex-grow: 1">
                             <div class="flex justify-between w-full">
                                 <p class="text-2xl font-bold">{{ $v->title }}</p>
@@ -36,9 +34,7 @@
                     </section>
                 @else
                     <section class="container mx-auto flex gap-4 bg-white bg-opacity-50 z-20 relative items-stretch">
-                        <img
-                            src="{{ $v->image }}"
-                            class="w-1/3 object-cover min-h-50  flex-none"/>
+                        <img src="{{ $v->image }}" class="w-1/3 object-cover min-h-50  flex-none" />
                         <div class="p-5 " style="flex-grow: 1">
                             <div class="flex justify-between w-full">
                                 <p class="text-2xl font-bold">{{ $v->title }}</p>
@@ -60,9 +56,9 @@
 
         <div class=" overflow-hidden">
             <img class="absolute  h-100% sm:block hidden " style="right: -30rem; top: -10rem"
-                 src="{{ asset('assets/images/obj1.png') }}"/>
+                src="{{ asset('assets/images/obj1.png') }}" />
             <img class="absolute  h-32 sm:block hidden top-36 right-20 "
-                 src="{{ asset('assets/images/planepaperwhite.png') }}"/>
+                src="{{ asset('assets/images/planepaperwhite.png') }}" />
         </div>
 
 

@@ -15,7 +15,7 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-        <section class="kontak z-10 relative" class="mt-10">
+        <section class="kontak" class="mt-10">
 
             <div class="mx-auto container">
 
@@ -44,15 +44,15 @@
                             </div>
                             <div>
                                 <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Whatsapp</p>
-                                <a class="text-center link font-bold block text-lg" href="https://wa.me/628975050520"
-                                    target="_blank">0897-5050-520
+                                <a class="text-center link font-bold block text-lg" href="https://wa.me/6281336329811"
+                                    target="_blank">0813-3632-9811
                                 </a>
                             </div>
                             <div>
-                                <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Facebook</p>
+                                <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Instagram</p>
                                 <a class="text-center link font-bold block text-lg"
-                                    href="https://www.facebook.com/pembelajaranpajak/" target="_blank">KBP Facebook
-                                </a>
+                                    href="https://www.instagram.com/kawanbelajarpajak/?hl=cs"
+                                    target="_blank">@kawanbelajarpajak</a>
                             </div>
                         </div>
                     </div>

@@ -81,6 +81,8 @@
                 <div class="grid grid-cols-3 gap-8 mt-10">
                     @foreach ($educations_offline as $eo)
                         <div class="bg-white p-3 secondary-shadow">
+                            <img
+                                src="https://www.blibli.com/friends-backend/wp-content/uploads/2022/03/daftar-promo-ramadhan-2022-fix.jpg" />
                             <p class="font-bold pb-2">{{ $eo->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $eo->description }}</p>
@@ -89,8 +91,9 @@
                                 <br>
                                 {{ $eo->schedule }}
                             </p>
-                            <a class="block button-primary mt-3 text-center">
-                                Harga: Rp {{ number_format($eo->price, 0, ',', '.') }} /Pertemuan <br>
+                            <a class="block button-primary mt-3 text-center" target="_blank"
+                                href="https://wa.me/6281336329811?text=halo%20Kawan%20Belajar%20Pajak,%20Saya%20tertarik%20untuk%20mengikuti%20{{ $eo->name }}">
+                                Harga: Rp {{ number_format($eo->price, 0, ',', '.') }} /Batch <br>
                                 Pesan Sekarang
                             </a>
                         </div>
@@ -115,8 +118,9 @@
                                 <br>
                                 {{ $eon->schedule }}
                             </p>
-                            <a class="block button-primary mt-3 text-center">
-                                Harga: Rp {{ number_format($eon->price, 0, ',', '.') }} /Pertemuan <br>
+                            <a class="block button-primary mt-3 text-center" target="_blank"
+                                href="https://wa.me/6281336329811?text=halo%20Kawan%20Belajar%20Pajak,%20Saya%20tertarik%20untuk%20mengikuti%20{{ $eon->name }}">
+                                Harga: Rp {{ number_format($eon->price, 0, ',', '.') }} /Batch <br>
                                 Pesan Sekarang
                             </a>
                         </div>
@@ -154,8 +158,9 @@
                                 <br>
                                 {{ $to->schedule }}
                             </p>
-                            <a class="block button-primary mt-3 text-center">
-                                Harga: Rp {{ number_format($to->price, 0, ',', '.') }} /Pertemuan <br>
+                            <a class="block button-primary mt-3 text-center" target="_blank"
+                                href="https://wa.me/6281336329811?text=halo%20Kawan%20Belajar%20Pajak,%20Saya%20tertarik%20untuk%20mengikuti%20{{ $to->name }}">
+                                Harga: Rp {{ number_format($to->price, 0, ',', '.') }} /Batch <br>
                                 Pesan Sekarang
                             </a>
                         </div>
@@ -180,8 +185,9 @@
                                 <br>
                                 {{ $ton->schedule }}
                             </p>
-                            <a class="block button-primary mt-3 text-center">
-                                Harga: Rp {{ number_format($ton->price, 0, ',', '.') }} /Pertemuan <br>
+                            <a class="block button-primary mt-3 text-center" target="_blank"
+                                href="https://wa.me/6281336329811?text=halo%20Kawan%20Belajar%20Pajak,%20Saya%20tertarik%20untuk%20mengikuti%20{{ $ton->name }}">
+                                Harga: Rp {{ number_format($ton->price, 0, ',', '.') }} /Batch <br>
                                 Pesan Sekarang
                             </a>
                         </div>
