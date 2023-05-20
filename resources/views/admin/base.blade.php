@@ -34,6 +34,12 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+{{--    <link href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" rel="stylesheet">--}}
+{{--    <link href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css" rel="stylesheet">--}}
+{{--    <link href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css" rel="stylesheet">--}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     @yield('morecss')
 </head>
 
@@ -65,10 +71,10 @@
                 <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow ">
                     <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownDefault">
 
-                        <a class="block py-2 px-4 text-xs   text-black/30 ">Username</a>
+                        <a class="block py-2 px-4 text-xs   ">Hi, {{auth()->user()->name}}</a>
                         <div class="divide-y-2"></div>
                         <li>
-                            <a class="block py-2 px-4 hover:bg-gray-100  text-red-600 cursor-pointer">Sign
+                            <a class="block py-2 px-4 hover:bg-gray-100  text-red-600 cursor-pointer" href="/logout">Sign
                                 out</a>
                         </li>
                     </ul>
@@ -131,6 +137,14 @@
                     <p class="title-menu block menu-text">Blog</p>
                 </a>
 
+                @if(auth()->user()->role == 'administrator')
+                    <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
+                       href="{{ route('administrator') }}">
+                        <img src="{{ asset('local/icons/feed.svg') }}"
+                             class=" mr-2 menu-icon text-sm w-6 object-scale-down">
+                        <p class="title-menu block menu-text">Administrator</p>
+                    </a>
+                @endif
                 {{-- <a class="menu {{ request()->is('/') ? 'bg-primarylight' : '' }}  nav-link"
                     href="{{ route('adminkontak') }}">
 
@@ -138,8 +152,6 @@
                         class=" mr-2 menu-icon text-sm w-6 object-scale-down">
                     <p class="title-menu block menu-text">Kontak</p>
                 </a> --}}
-
-
             </div>
         </div>
 
@@ -191,8 +203,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
     <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
 
+
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+{{--    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>--}}
+{{--    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.flash.min.js"></script>--}}
+{{--    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>--}}
+{{--    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>--}}
+{{--    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>--}}
+{{--    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>--}}
+{{--    <script type="text/javascript"--}}
+{{--            src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>--}}
+{{--    <script type="text/javascript"--}}
+{{--            src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>--}}
+{{--    <script type="text/javascript"--}}
+{{--            src="https://cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>--}}
+
+    <script src="{{ asset('js/admin/datatable.js') }}"></script>
+
+
     @yield('morejs')
 
+
+<script>
+    jQuery.fn.dataTableExt.oApi.fnPagingInfo = function (oSettings) {
+        return {
+            "iStart": oSettings._iDisplayStart,
+            "iEnd": oSettings.fnDisplayEnd(),
+            "iLength": oSettings._iDisplayLength,
+            "iTotal": oSettings.fnRecordsTotal(),
+            "iFilteredTotal": oSettings.fnRecordsDisplay(),
+            "iPage": oSettings._iDisplayLength === -1 ?
+                0 : Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
+            "iTotalPages": oSettings._iDisplayLength === -1 ?
+                0 : Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
+        };
+    };
+</script>
 
 </body>
 

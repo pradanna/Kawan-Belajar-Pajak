@@ -407,6 +407,25 @@ a.anchor {
   color: white;
 }
 
+.tentangkamidashboard p:nth-child(odd) {
+  background: #1c5e8e;
+  box-shadow: 5px 5px 1px white;
+  padding: 30px;
+  margin-right: 50px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.tentangkamidashboard p:nth-child(even) {
+  background: #ffa500;
+  box-shadow: 5px 5px 1px white;
+  padding: 30px;
+  margin-left: 50px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .berita section:nth-child(odd) {
   flex-direction: row;
   margin-bottom: 30px;

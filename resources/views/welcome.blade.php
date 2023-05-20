@@ -4,12 +4,11 @@
     {{-- Headline --}}
     <div class="absolute md:left-28 md:top-1/4 md:w-1/3 top-36 left-5 right-5 z-20">
         <p class="md:text-7xl text-xl font-bold leading-snug text-black " data-aos="fade-right" data-aos-duration="300">
-            ENJOY BELAJAR AKUNTANSI DAN PAJAK
+            {{ $hero->jargon_1 }}
         </p>
-        <p class="mt-4 md:text-2xl text-xl" data-aos="fade-right" data-aos-duration="400">We Are Your Friends and You are My
-            Friend</p>
+        <p class="mt-4 md:text-2xl text-xl" data-aos="fade-right" data-aos-duration="400">{{ $hero->jargon_2 }}</p>
         <div data-aos="fade-right" data-aos-duration="500">
-            <a class="mt-6 inline-block button-joinclass" href="#">Join Class</a>
+            <a class="mt-6 inline-block button-joinclass" href="#pilihkelas">Join Class</a>
         </div>
     </div>
 
@@ -27,17 +26,17 @@
 
         <img class="absolute  h-100% sm:block hidden obj3" src="{{ asset('assets/images/obj3.png') }}" />
         <div class="absolute right-32 bottom-0 h-75%">
-            <img class=" object-bottom object-contain h-full" src="{{ asset('assets/images/sertifikat.jpg') }}" />
+            <img class=" object-bottom object-contain h-full" src="{{ $hero->image }}" />
 
 
         </div>
     </section>
 
     <div style="background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(255, 255, 255, 1)
-  ), url({{ asset('assets/images/bg2.jpg') }}) no-repeat  center;"
+        to bottom,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 1)
+        ), url({{ asset('assets/images/bg2.jpg') }}) no-repeat  center;"
         class="relative bg-overlay px-5">
         {{-- KENAPA --}}
         <section class="container md:absolute relative mt-100 bg-white shadow-md  rounded-2xl p-10 z-10 mx-auto"
@@ -50,32 +49,33 @@
 
             <div class="flex flex-row-reverse gap-10">
 
-                <div>
-                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">LKP Kawan Belajar
-                        Pajak merupakan media pembelajaran akuntansi dan perpajakan
-                        yang dimiliki oleh PT KINERJA BERKAH PRATAMA. Yang telah terdaftar di OSIS Nomor
-                        201022000568755
-                        dengan KBLI 85491, 85495 dan 85499.</p>
-                    <p class="md:text-lg text-xl   text-black bg-secondary  white-shadow mb-3  p-3 ml-10">Berbekal
-                        dari
-                        pengalaman praktik kami bekerja di lapangan, kami mengajak teman-teman semuanya untuk
-                        bergabung dan belajar tentang akuntansi serta bagaimana penerapan akuntansi di lapangan.
-                        Kami
-                        berangkat dari banyak kegelisahan teman-teman baik siswa akuntansi, mahasiswa akuntansi,
-                        mahasiswa
-                        perpajakan dan juga yang sifatnya umum seperti pelaku UMKM yang masih kebingungan dalam
-                        pengelolaan
-                        keuangan usaha/bisnisnya.</p>
-                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">Oleh karena
-                        itu,
-                        harapan
-                        dan tujuan kita adalah memecahkan kegelisahan tersebut dengan cara membantu
-                        teman-teman semuanya. Arti teman/kawan belajar memiliki makna bahwa kita adalah teman kalian
-                        dan
-                        kalian adalah teman kita. Jadi anggap saja kita seperti teman dekat atau bahkan keluarga
-                        (tidak
-                        usah
-                        sungkan).</p>
+                <div class="tentangkamidashboard">
+                    {!! $hero->about_me !!}
+                    {{--                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">LKP Kawan Belajar --}}
+                    {{--                        Pajak merupakan media pembelajaran akuntansi dan perpajakan --}}
+                    {{--                        yang dimiliki oleh PT KINERJA BERKAH PRATAMA. Yang telah terdaftar di OSIS Nomor --}}
+                    {{--                        201022000568755 --}}
+                    {{--                        dengan KBLI 85491, 85495 dan 85499.</p> --}}
+                    {{--                    <p class="md:text-lg text-xl   text-black bg-secondary  white-shadow mb-3  p-3 ml-10">Berbekal --}}
+                    {{--                        dari --}}
+                    {{--                        pengalaman praktik kami bekerja di lapangan, kami mengajak teman-teman semuanya untuk --}}
+                    {{--                        bergabung dan belajar tentang akuntansi serta bagaimana penerapan akuntansi di lapangan. --}}
+                    {{--                        Kami --}}
+                    {{--                        berangkat dari banyak kegelisahan teman-teman baik siswa akuntansi, mahasiswa akuntansi, --}}
+                    {{--                        mahasiswa --}}
+                    {{--                        perpajakan dan juga yang sifatnya umum seperti pelaku UMKM yang masih kebingungan dalam --}}
+                    {{--                        pengelolaan --}}
+                    {{--                        keuangan usaha/bisnisnya.</p> --}}
+                    {{--                    <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-10">Oleh karena --}}
+                    {{--                        itu, --}}
+                    {{--                        harapan --}}
+                    {{--                        dan tujuan kita adalah memecahkan kegelisahan tersebut dengan cara membantu --}}
+                    {{--                        teman-teman semuanya. Arti teman/kawan belajar memiliki makna bahwa kita adalah teman kalian --}}
+                    {{--                        dan --}}
+                    {{--                        kalian adalah teman kita. Jadi anggap saja kita seperti teman dekat atau bahkan keluarga --}}
+                    {{--                        (tidak --}}
+                    {{--                        usah --}}
+                    {{--                        sungkan).</p> --}}
                 </div>
             </div>
             {{-- <p class="text-center md:text-4xl text-2xl font-bold mb-16"> Kenapa harus belajar akuntansi / <br> pajak
@@ -139,7 +139,7 @@
 
         <div class="md:h-pilihkelas h-0"></div>
 
-        <section class="ourservice py-32 relative">
+        <section class="ourservice py-32 relative" id="pilihkelas">
             <div class="flex justify-center">
                 <p
                     class="text-center md:text-4xl text-2xl font-bold mb-10 px-4 py-2 txt-shdw text-white z-10 bg-secondary white-shadow ">
@@ -162,15 +162,15 @@
                         </p>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="600">
+                <a href="https://wa.link/28sqjt" data-aos="fade-up" data-aos-duration="600">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
                             src="{{ asset('/assets/images/online-test.png') }}" />
                         <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Akuntansi <br> Online</p>
                     </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="700">
+                </a>
+                <a href="https://wa.link/ebpgdv" data-aos="fade-up" data-aos-duration="700">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
@@ -178,7 +178,7 @@
                         <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Akuntansi <br> In Campus
                         </p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <hr class="mx-auto w-96">
@@ -193,22 +193,22 @@
                         </p>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="600">
+                <a href="https://wa.link/8aokq4" data-aos="fade-up" data-aos-duration="600">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
                             src="{{ asset('/assets/images/online-test.png') }}" />
                         <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Pajak <br> Online</p>
                     </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="700">
+                </a>
+                <a href="https://wa.link/uvo6um" data-aos="fade-up" data-aos-duration="700">
                     <div class="card flex flex-col p-3 justify-center items-center" x-data="{ hover: false }"
                         x-effect="console.log(hover)" x-on:mouseenter="hover = true" @mouseover.away="hover = false">
                         <img class="h-16 icon object-contain" :class="hover ? 'hovered' : ''"
                             src="{{ asset('/assets/images/school.png') }}" />
                         <p class="text-center mt-3 text-lg font-medium leading-5">Belajar Pajak <br> In Campus</p>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -228,75 +228,69 @@
         <section class="splide sm:p-0 p-5 z-10" aria-label="Slide Container Example">
             <div class="splide__track container mx-auto p-5">
                 <ul class="splide__list ">
-                    <li class="splide__slide">
-                        <div class="splide__slide__container ">
-                            <div class="shadow-lg p-5 min-h-52 bg-white rounded-lg ">
-                                <div class="flex justify-between pb-2">
-                                    <div class=" flex-grow">
-                                        <p class="font-bold">Nur Imaki</p>
-                                        <p class="bg-secondary text-white px-1 rounded-sm inline">Nusa Tenggara
-                                            Barat
-                                        </p>
-                                        <p>Kepala ITB</p>
+                    @foreach ($testimony as $v)
+                        <li class="splide__slide">
+                            <div class="splide__slide__container ">
+                                <div class="shadow-lg p-5 min-h-52 bg-white rounded-lg ">
+                                    <div class="flex justify-between pb-2">
+                                        <div class=" flex-grow">
+                                            <p class="font-bold">{{ $v->name }}</p>
+                                            <p class="bg-secondary text-white px-1 rounded-sm inline">{{ $v->origin }}
+                                            </p>
+                                            <p>{{ $v->job }}</p>
+                                        </div>
+                                        <div
+                                            class="flex justify-center items-center overflow-hidden relative w-20 h-20 rounded-full">
+                                            <img src="{{ asset($v->image) }}" class="w-full h-full object-cover" />
+                                        </div>
                                     </div>
-                                    <div
-                                        class="flex justify-center items-center overflow-hidden relative w-20 h-20 rounded-full">
-                                        <img src="https://akcdn.detik.net.id/visual/2022/12/14/kiri-avatar-the-way-of-water_169.png?w=650"
-                                            class="w-full h-full object-cover" />
-                                    </div>
+
+
+                                    <hr>
+
+                                    <p class="text-xs text-gray-700 p-3">
+                                        {{ $v->testimony }}
+                                    </p>
                                 </div>
-
-
-                                <hr>
-
-                                <p class="text-xs text-gray-700 p-3">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen
-                                    book. It has survived not only five centuries, but also the leap into electronic
-                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                    with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                    recently with desktop publishing software like Aldus PageMaker including
-                                    versions of Lorem Ipsum.
-                                </p>
                             </div>
-                        </div>
 
-                    </li>
-                    <li class="splide__slide">
-                        <div class="splide__slide__container">
-                            <div class="shadow-lg p-5 min-h-52 bg-white rounded-lg ">
-                                <div class="flex justify-between pb-2">
-                                    <div class=" flex-grow">
-                                        <p class="font-bold">Nur Imaki</p>
-                                        <p class="bg-secondary text-white px-1 rounded-sm inline">Nusa Tenggara
-                                            Barat
-                                        </p>
-                                        <p>Kepala ITB</p>
-                                    </div>
-                                    <div
-                                        class="flex justify-center items-center overflow-hidden relative w-20 h-20 rounded-full">
-                                        <img src="https://akcdn.detik.net.id/visual/2022/12/14/kiri-avatar-the-way-of-water_169.png?w=650"
-                                            class="w-full h-full object-cover" />
-                                    </div>
-                                </div>
+                        </li>
+                    @endforeach
+                    {{--                    <li class="splide__slide"> --}}
+                    {{--                        <div class="splide__slide__container"> --}}
+                    {{--                            <div class="shadow-lg p-5 min-h-52 bg-white rounded-lg "> --}}
+                    {{--                                <div class="flex justify-between pb-2"> --}}
+                    {{--                                    <div class=" flex-grow"> --}}
+                    {{--                                        <p class="font-bold">Nur Imaki</p> --}}
+                    {{--                                        <p class="bg-secondary text-white px-1 rounded-sm inline">Nusa Tenggara --}}
+                    {{--                                            Barat --}}
+                    {{--                                        </p> --}}
+                    {{--                                        <p>Kepala ITB</p> --}}
+                    {{--                                    </div> --}}
+                    {{--                                    <div --}}
+                    {{--                                        class="flex justify-center items-center overflow-hidden relative w-20 h-20 rounded-full"> --}}
+                    {{--                                        <img --}}
+                    {{--                                            src="https://akcdn.detik.net.id/visual/2022/12/14/kiri-avatar-the-way-of-water_169.png?w=650" --}}
+                    {{--                                            class="w-full h-full object-cover"/> --}}
+                    {{--                                    </div> --}}
+                    {{--                                </div> --}}
 
 
-                                <hr>
+                    {{--                                <hr> --}}
 
-                                <p class="text-xs text-gray-700 p-3">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen
-                                    book. It has survived not only five centuries, but also the leap into electronic
-                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                    with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                    recently with desktop publishing software like Aldus PageMaker including
-                                    versions of Lorem Ipsum.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
+                    {{--                                <p class="text-xs text-gray-700 p-3"> --}}
+                    {{--                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem --}}
+                    {{--                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an --}}
+                    {{--                                    unknown printer took a galley of type and scrambled it to make a type specimen --}}
+                    {{--                                    book. It has survived not only five centuries, but also the leap into electronic --}}
+                    {{--                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s --}}
+                    {{--                                    with the release of Letraset sheets containing Lorem Ipsum passages, and more --}}
+                    {{--                                    recently with desktop publishing software like Aldus PageMaker including --}}
+                    {{--                                    versions of Lorem Ipsum. --}}
+                    {{--                                </p> --}}
+                    {{--                            </div> --}}
+                    {{--                        </div> --}}
+                    {{--                    </li> --}}
                 </ul>
             </div>
         </section>
@@ -486,7 +480,8 @@
                         data-aos-duration="300">
                         Office</p>
                     <a class="text-center link font-bold text-lg block" data-aos="fade-up" data-aos-duration="300"
-                        href="https://goo.gl/maps/HKvAqTnJS7nkijZ9A" target="_blank">Jayengan Kidul RT 003 RW 008 Jayengan
+                        href="https://goo.gl/maps/HKvAqTnJS7nkijZ9A" target="_blank">Jayengan Kidul RT 003 RW 008
+                        Jayengan
                         Serengan
                         Surakarta
                     </a>
@@ -509,7 +504,7 @@
                             <p class="text-center p-10 mb-0 pb-0 text-2xl text-gray-600">Instagram</p>
                             <a class="text-center link font-bold block text-lg"
                                 href="https://www.instagram.com/kawanbelajarpajak/?hl=cs"
-                                target="_blank">@kawanbelajarpajak
+                                target="_blank">@kawanbelajarpajak</a>
                         </div>
                     </div>
                 </div>
