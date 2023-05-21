@@ -82,7 +82,7 @@
                     @foreach ($educations_offline as $eo)
                         <div class="bg-white p-3 secondary-shadow">
                             <img
-                                src="https://www.blibli.com/friends-backend/wp-content/uploads/2022/03/daftar-promo-ramadhan-2022-fix.jpg" />
+                                src="{{$eo->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $eo->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $eo->description }}</p>
@@ -110,6 +110,8 @@
 
                     @foreach ($educations_online as $eon)
                         <div class="bg-white p-3 secondary-shadow">
+                            <img
+                                src="{{$eon->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $eon->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $eon->description }}</p>
@@ -150,6 +152,8 @@
                 <div class="grid grid-cols-3 gap-8 mt-10">
                     @foreach ($tax_offline as $to)
                         <div class="bg-white p-3 secondary-shadow">
+                            <img
+                                src="{{$to->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $to->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $to->description }}</p>
@@ -177,6 +181,8 @@
                 <div class="grid grid-cols-3 gap-8 mt-10">
                     @foreach ($tax_online as $ton)
                         <div class="bg-white p-3 secondary-shadow">
+                            <img
+                                src="{{$ton->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $ton->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $ton->description }}</p>

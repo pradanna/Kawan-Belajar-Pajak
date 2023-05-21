@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\CustomController;
 use App\Models\About;
 use App\Models\Education;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
 
-class EducationController extends Controller
+class EducationController extends CustomController
 {
 
     public function index()
@@ -52,7 +53,15 @@ class EducationController extends Controller
         }
 
         $data = Education::find(request('id'));
+        $imageName       = $this->generateImageName('image');
+        $destinationPath = public_path().'/assets/images/education';
+
+        if (request()->has('image')) {
+            $form['image'] = '/assets/images/education/'.$imageName;
+        }
+        $oldImg = null;
         if ($data) {
+            $oldImg = $data->image;
             $data->update($form);
             $data['status_text'] = 'Berhasil edit data';
         } else {
@@ -61,12 +70,18 @@ class EducationController extends Controller
 
         }
 
+        if (request()->has('image')) {
+            $file = request()->file('image');
+            $this->saveImage($imageName, $file, $destinationPath, $oldImg);
+        }
+
         return $data;
     }
 
     public function delete($id)
     {
         $data = Education::find($id);
+        $this->deleteImg('Education', $id, $data->image);
         $type = $data->type;
         Education::destroy($id);
 
@@ -87,6 +102,7 @@ class EducationController extends Controller
                                  $string = 'data-id='.$id;
                                  $string .= ' data-description='.$data->description;
                                  $string .= ' data-type='.$data->type;
+                                 $string .= ' data-image='.$data->image;
                                  if ($data->type <= 3){
                                     $string .= ' data-name='.$data->name;
                                     $string .= ' data-schedule='.$data->schedule;

@@ -13,6 +13,7 @@ class Dashboard extends Model
         'jargon_1',
         'jargon_2',
         'image',
-        'about_me'
+        'about_me',
+        'popup'
     ];
 }

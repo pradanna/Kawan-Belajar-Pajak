@@ -333,7 +333,7 @@
                 <!-- Modal body -->
                 <form id="form" onsubmit="return saveForm()">
                     @csrf
-                    <input name="id" id="id" class="Form-edit">
+                    <input name="id" id="id" class="Form-edit" hidden>
                     <input name="type" id="type" hidden>
                     <div class="p-6 space-y-6">
                         <div class="w-full">
@@ -460,20 +460,8 @@
         };
         let dropImage;
         $(document).ready(function() {
-            dropImage = $('.dropImage').dropify({
-                messages: {
-                    'default': 'Masukkan File Foto',
-                    'replace': 'Drag and drop or click to replace',
-                    'remove': 'Remove',
-                    'error': 'Ooops, something wrong happended.'
-                }
-            });
 
-            dropImage = dropImage.data('dropify');
-            dropImage.resetPreview();
-            dropImage.clearElement();
-            dropImage.destroy();
-            dropImage.init();
+
         })
         let modalTyp = 0;
         $('#modalles #type').val(modalTyp);
@@ -513,8 +501,6 @@
             let row = $(this).data()
             let rowtb = $(this).closest('tr')
 
-
-
             var values = "";
             if (modalTyp >= 4) {
                 $('.divLes').addClass('hidden')
@@ -533,7 +519,25 @@
                 } else {
                     $('#modalles #description').val(columns[1].innerHTML)
                 }
+
+
             }
+
+            dropImage = $('.dropImage').dropify({
+                messages: {
+                    'default': 'Masukkan File Foto',
+                    'replace': 'Drag and drop or click to replace',
+                    'remove': 'Remove',
+                    'error': 'Ooops, something wrong happended.'
+                }
+            });
+
+            dropImage = dropImage.data('dropify');
+            dropImage.resetPreview();
+            dropImage.clearElement();
+            dropImage.settings.defaultFile = row?.image;
+            dropImage.destroy();
+            dropImage.init();
 
             modalles.show();
         })
