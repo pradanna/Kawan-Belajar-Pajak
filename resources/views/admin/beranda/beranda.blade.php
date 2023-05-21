@@ -46,28 +46,27 @@
         <div class="bg-white p-5">
             <p>Pop Up Iklan</p>
             <hr class="mb-5">
-            <form id="formJargon" method="POST" enctype="multipart/form-data">
+            <form id="formPopup" method="POST" enctype="multipart/form-data">
                 <div class="flex gap-4">
                     <div class="flex-grow">
                         @csrf
-
 
                     </div>
                     <div class="w-full">
                         <label for="popup" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar
                             POP UP</label>
                         {{--                    <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form> --}}
-                        <div class="input-field d-flex justify-content-center" id="div-img">
-                            <input type="file" id="popup" name="popup" class="dropImage" data-min-height="10"
-                                data-heigh="400" accept="image/jpeg, image/jpg, image/png"
-                                data-allowed-file-extensions="jpg jpeg png" />
+                        <div class="d-flex justify-content-center" style="width: 100%">
+                            <div class="input-field w-1/3" id="div-img">
+                                <input type="file" id="popup" name="popup" class="dropImagePop" data-min-height="10"
+                                       data-height="400" accept="image/jpeg, image/jpg, image/png"
+                                       data-allowed-file-extensions="jpg jpeg png" />
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
                 <div class="flex justify-end">
-                    <button type="button" onclick="saveData('Update Data','formJargon')"
+                    <button type="button" onclick="saveData('Update Data','formPopup')"
                         class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  mb-2 mt-3">Simpan
                         Perubahan
                     </button>
@@ -159,8 +158,25 @@
         Dropzone.options.myDropzone = {
             // Configuration options go here
         };
-        let dropImage;
+        let dropImage, dropImagePop;
         $(document).ready(function() {
+
+            dropImagePop = $('.dropImagePop').dropify({
+                messages: {
+                    'default': 'Masukkan File Foto',
+                    'replace': 'Drag and drop or click to replace',
+                    'remove': 'Remove',
+                    'error': 'Ooops, something wrong happended.'
+                }
+            });
+            dropImagePop = dropImagePop.data('dropify');
+            dropImagePop.resetPreview();
+            dropImagePop.clearElement();
+            dropImagePop.settings.defaultFile = '{{ $data ? $data->popup : '' }}';
+            dropImagePop.destroy();
+            dropImagePop.init();
+
+
             dropImage = $('.dropImage').dropify({
                 messages: {
                     'default': 'Masukkan File Foto',
@@ -169,7 +185,6 @@
                     'error': 'Ooops, something wrong happended.'
                 }
             });
-
             dropImage = dropImage.data('dropify');
             dropImage.resetPreview();
             dropImage.clearElement();

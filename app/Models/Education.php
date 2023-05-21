@@ -15,5 +15,6 @@ class Education extends Model
         'description',
         'schedule',
         'price',
+        'image'
     ];
 }

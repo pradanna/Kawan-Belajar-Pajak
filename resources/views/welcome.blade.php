@@ -23,7 +23,7 @@
                         </svg>
                     </button>
                     <img class="w-full object-fill"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsWdrocA7y8R71s_brcNN8d9uQggBdWZ7Frg&usqp=CAU" />
+                        src="{{$hero && $hero->popup ? $hero->popup : ''}}" />
                 </div>
 
             </div>
@@ -567,7 +567,9 @@
 
         // A $( document ).ready() block.
         document.addEventListener("DOMContentLoaded", () => {
+            @if($hero && $hero->popup)
             modal.show();
+            @endif
         });
 
         function closepopup() {
