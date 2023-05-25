@@ -22,8 +22,7 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <img class="w-full object-fill"
-                        src="{{$hero && $hero->popup ? $hero->popup : ''}}" />
+                    <img class="w-full object-fill" src="{{ $hero && $hero->popup ? $hero->popup : '' }}" />
                 </div>
 
             </div>
@@ -567,8 +566,8 @@
 
         // A $( document ).ready() block.
         document.addEventListener("DOMContentLoaded", () => {
-            @if($hero && $hero->popup)
-            modal.show();
+            @if ($hero && $hero->popup)
+                modal.show();
             @endif
         });
 
