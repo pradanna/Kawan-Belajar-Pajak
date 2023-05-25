@@ -35,6 +35,8 @@ class BlogController extends Controller
         );
         $data = Blog::find(request('id'));
         $field = request()->all();
+
+        $field['url'] = request('url') ?? null;
         $field['author'] = request('author') ?? "anonymous";
 
         if ($data) {
@@ -71,10 +73,15 @@ class BlogController extends Controller
                              'action',
                              function ($data) {
                                  $id = $data->id;
+                                 $url = $data->url;
+                                 $title = $data->title;
+                                 $author = $data->author;
+                                 $date = $data->date;
                                  $string = 'data-id='.$id;
-                                 $string .= ' data-title='.$data->title;
-                                 $string .= ' data-date='.$data->date;
-                                 $string .= ' data-author='.$data->author;
+                                 $string .= " data-title='$title'";
+                                 $string .= " data-date='$date'";
+                                 $string .= " data-author='$author'";
+                                 $string .= " data-url='$url'";
 
                                  return "<a type=\"button\" ".$string."
                                        class=\"editData font-bold cursor-pointer p-2 bg-blue-600 rounded-md text-white transition-all duration-300  hover:bg-blue-400\">Edit</a>

@@ -92,9 +92,12 @@ class AdminController extends Controller
                              'action',
                              function ($data) {
                                  $id     = $data->id;
+                                 $name     = $data->name;
+                                 $username     = $data->username;
+
                                  $string = 'data-id='.$id;
-                                 $string .= ' data-name='.$data->name;
-                                 $string .= ' data-username='.$data->username;
+                                 $string .= " data-name='$name'";
+                                 $string .= " data-username='$username'";
 
                                  return "<div class='flex items-center gap-2'><a type=\"button\" ".$string."
                                        class=\"editData font-bold cursor-pointer p-2 bg-blue-600 rounded-md text-white transition-all duration-300  hover:bg-blue-400\">Edit</a>
