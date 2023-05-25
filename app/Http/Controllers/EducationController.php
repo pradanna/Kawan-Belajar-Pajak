@@ -99,14 +99,21 @@ class EducationController extends CustomController
                              'action',
                              function ($data) {
                                  $id = $data->id;
+                                 $name = $data->name;
+                                 $description = $data->description;
+                                 $type = $data->type;
+                                 $image = $data->image;
+                                 $schedule = $data->schedule;
+                                 $price = $data->price;
+
                                  $string = 'data-id='.$id;
-                                 $string .= ' data-description='.$data->description;
-                                 $string .= ' data-type='.$data->type;
-                                 $string .= ' data-image='.$data->image;
+                                 $string .= " data-description='$description'";
+                                 $string .= " data-type='$type'";
+                                 $string .= " data-image='$image'";
                                  if ($data->type <= 3){
-                                    $string .= ' data-name='.$data->name;
-                                    $string .= ' data-schedule='.$data->schedule;
-                                    $string .= ' data-price='.$data->price;
+                                    $string .= " data-name='$name'";
+                                    $string .= " data-schedule='$schedule'";
+                                    $string .= " data-price='$price'";
                                  }
                                  return "<a type=\"button\" ".$string."
                                        class=\"editData font-bold cursor-pointer p-2 bg-blue-600 rounded-md text-white transition-all duration-300  hover:bg-blue-400\">Edit</a>

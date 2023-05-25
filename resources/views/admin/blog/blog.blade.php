@@ -125,6 +125,14 @@
                                </div>
                            </div>
                            <div class="mb-6 mt-6">
+                               <label for="author"
+                                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Url
+                               </label>
+                               <textarea id="url" name="url"
+                                      class="form-edit bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                                         placeholder=""></textarea>
+                           </div>
+                           <div class="mb-6 mt-6">
                                <label for="tanggal"
                                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal
                                </label>
@@ -199,6 +207,7 @@
                 $('#modalblog #title').val(row.title);
                 $('#modalblog #date').val(row.date);
                 $('#modalblog #author').val(row.author);
+                $('#modalblog #url').val(row.url);
                 let columns = rowtb.find('td');
                 value = columns[2].innerHTML;
             }
