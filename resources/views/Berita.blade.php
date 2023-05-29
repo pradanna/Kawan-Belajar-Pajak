@@ -14,7 +14,7 @@
         </section>
 
 
-        <div class="berita ">
+        <div class="berita md:mx-0 mx-2">
             @foreach ($news as $key => $v)
                 @if ($key % 2 === 0)
                     <section class="container mx-auto flex gap-4 bg-white bg-opacity-50 z-20 relative items-stretch">

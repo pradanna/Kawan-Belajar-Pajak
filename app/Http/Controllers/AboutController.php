@@ -51,8 +51,8 @@ class AboutController extends CustomController
         $repo = LearningEnvironment::all();
 
         $data = [];
-        foreach ($repo as $key => $d){
-            if ($d->image && file_exists(public_path().$d->image)) {
+        foreach ($repo as $key => $d) {
+            if ($d->image && file_exists(public_path() . $d->image)) {
                 $d['size'] = filesize(public_path($d['image']));
             }
             $data[$key] = $d;
@@ -70,10 +70,10 @@ class AboutController extends CustomController
 
             $imageName       = $this->generateImageName('file');
             $file            = request()->file('file');
-            $destinationPath = public_path().'/assets/images/environment';
+            $destinationPath = public_path() . '/assets/images/environment';
             $data            = LearningEnvironment::create(
                 [
-                    'image' => '/assets/images/environment/'.$imageName,
+                    'image' => '/assets/images/environment/' . $imageName,
                 ]
             );
 
@@ -88,6 +88,7 @@ class AboutController extends CustomController
         $about = About::firstOrFail();
         $team = Team::all();
         $students = Student::all();
-        return view('tentang')->with(['about' => $about, 'teams' => $team, 'students' => $students]);
+        $lingkungan = LearningEnvironment::all();
+        return view('tentang')->with(['about' => $about, 'teams' => $team, 'students' => $students, 'lingkungan' => $lingkungan]);
     }
 }

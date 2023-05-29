@@ -32,7 +32,7 @@
 
     {{-- Headline --}}
     <div class="absolute md:left-28 md:top-1/4 md:w-1/3 top-36 left-5 right-5 z-20">
-        <p class="md:text-7xl text-xl font-bold leading-snug text-black " data-aos="fade-right" data-aos-duration="300">
+        <p class="md:text-7xl text-4xl font-bold leading-snug text-black " data-aos="fade-right" data-aos-duration="300">
             {{ $hero->jargon_1 }}
         </p>
         <p class="mt-4 md:text-2xl text-xl" data-aos="fade-right" data-aos-duration="400">{{ $hero->jargon_2 }}</p>
@@ -73,7 +73,7 @@
             style="
         left: 50%;
         transform: translate(-50%, -50px);">
-            <p class="text-4xl text-center mb-20" data-aos="fade-up" data-aos-duration="300"><span
+            <p class="text-4xl text-center md:mb-20 mb-5" data-aos="fade-up" data-aos-duration="300"><span
                     class="text-primary font-bold">Tentang </span> Kami
             </p>
 
@@ -402,17 +402,20 @@
 
                     </div>
                     <div>
-                        <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-6">1. Terbuka
-                            tentang ilmu Pajak dan
-                            Akuntansi</p>
-                        <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3 ml-6">2. Lebih
-                            Percaya
-                            Diri</p>
-                        <p class="md:text-lg text-xl   text-white bg-primary  white-shadow mb-3  p-3 mr-6">3.
-                            Produktif</p>
-                        <p class="md:text-lg text-xl  text-white bg-secondary  white-shadow mb-3  p-3 ml-6">4. Kompeten
-                            Pada
-                            -------------
+                        <p class="md:text-lg text-xl   mb-3 text-white bg-primary  white-shadow p-3 mr-6">1. Memiliki
+                            pengalaman tentang dunia akuntansi dan pajak
+                        </p>
+                        <p class="md:text-lg text-xl   text-white bg-secondary  white-shadow mb-3  p-3 ml-6">2. Terbuka
+                            dalam ilmu akuntansi dan pajak</p>
+                        <p class="md:text-lg text-xl   text-white bg-primary  white-shadow mb-3  p-3 mr-6">3. Tergabung
+                            relasi dari seluruh daerah di Indonesia
+                        </p>
+                        <p class="md:text-lg text-xl  text-white bg-secondary  white-shadow mb-3  p-3 ml-6">4. Memiliki
+                            sertifikat bergengsi
+
+                        </p>
+                        <p class="md:text-lg text-xl   text-white bg-primary  white-shadow mb-3  p-3 mr-6">5. Memudahkan
+                            masalahmu tentang akuntansi dan pajak
                         </p>
                     </div>
                 </div>

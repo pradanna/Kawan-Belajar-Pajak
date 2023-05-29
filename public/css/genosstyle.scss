@@ -481,3 +481,29 @@ a.anchor {
     margin-bottom: 30px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .tentangkamidashboard {
+    p:nth-child(odd) {
+      background: $primary-color;
+      box-shadow: 5px 5px 1px white;
+      padding: 10px;
+      margin-right: 0;
+      color: white;
+      font-weight: normal;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+    }
+
+    p:nth-child(even) {
+      background: $primary-secondary;
+      box-shadow: 5px 5px 1px white;
+      padding: 10px;
+      margin-left: 0;
+      color: white;
+      font-weight: normal;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+    }
+  }
+}

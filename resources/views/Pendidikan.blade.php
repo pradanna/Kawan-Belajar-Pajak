@@ -73,7 +73,7 @@
                 <p class="text-2xl text-black font-bold">Akuntansi</p>
             </div>
 
-            <div>
+            <div class="md:mx-0 mx-2">
                 <div class=" bg-blue flex justify-start items-center relative mt-16">
                     <p class="inline-block p-3 text-2xl text-white bg-secondary white-shadow font-bold z-10">BELAJAR
                         AKUNTANSI OFFLINE</p>
@@ -81,8 +81,8 @@
                 <div class="grid grid-cols-3 gap-8 mt-10">
                     @foreach ($educations_offline as $eo)
                         <div class="bg-white p-3 secondary-shadow">
-                            <img
-                                src="{{$eo->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
+                            <img src="{{ $eo->image }}"
+                                onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $eo->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $eo->description }}</p>
@@ -101,7 +101,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="md:mx-0 mx-2">
                 <div class=" bg-blue flex justify-start items-center relative mt-16">
                     <p class="inline-block p-3 text-2xl text-white bg-secondary white-shadow font-bold z-10">BELAJAR
                         AKUNTANSI ONLINE</p>
@@ -110,8 +110,8 @@
 
                     @foreach ($educations_online as $eon)
                         <div class="bg-white p-3 secondary-shadow">
-                            <img
-                                src="{{$eon->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
+                            <img src="{{ $eon->image }}"
+                                onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $eon->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $eon->description }}</p>
@@ -143,7 +143,7 @@
                 <p class="text-2xl text-black font-bold">Pajak</p>
             </div>
 
-            <div>
+            <div class="md:mx-0 mx-2">
                 <div class=" bg-blue flex justify-start items-center relative mt-16">
                     <p class="inline-block p-3 text-2xl text-white bg-secondary white-shadow font-bold z-10">BELAJAR
                         PAJAK
@@ -152,8 +152,8 @@
                 <div class="grid grid-cols-3 gap-8 mt-10">
                     @foreach ($tax_offline as $to)
                         <div class="bg-white p-3 secondary-shadow">
-                            <img
-                                src="{{$to->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
+                            <img src="{{ $to->image }}"
+                                onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $to->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $to->description }}</p>
@@ -172,7 +172,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="md:mx-0 mx-2">
                 <div class=" bg-blue flex justify-start items-center relative mt-16">
                     <p class="inline-block p-3 text-2xl text-white bg-secondary white-shadow font-bold z-10">BELAJAR
                         PAJAK
@@ -181,8 +181,8 @@
                 <div class="grid grid-cols-3 gap-8 mt-10">
                     @foreach ($tax_online as $ton)
                         <div class="bg-white p-3 secondary-shadow">
-                            <img
-                                src="{{$ton->image}}" onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
+                            <img src="{{ $ton->image }}"
+                                onerror="this.onerror=null; this.src='/assets/icons/logo1.png'" />
                             <p class="font-bold pb-2">{{ $ton->name }}</p>
                             <hr>
                             <p class="text-sm pt-2 pb-2 text-gray-600">{{ $ton->description }}</p>
