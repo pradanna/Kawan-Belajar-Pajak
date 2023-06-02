@@ -54,10 +54,10 @@ class EducationController extends CustomController
 
         $data = Education::find(request('id'));
         $imageName       = $this->generateImageName('image');
-        $destinationPath = public_path().'/assets/images/education';
+        $destinationPath = public_path() . '/assets/images/education';
 
         if (request()->has('image')) {
-            $form['image'] = '/assets/images/education/'.$imageName;
+            $form['image'] = '/assets/images/education/' . $imageName;
         }
         $oldImg = null;
         if ($data) {
@@ -67,7 +67,6 @@ class EducationController extends CustomController
         } else {
             $data = Education::create($form);
             $data['status_text'] = 'Berhasil simpan data';
-
         }
 
         if (request()->has('image')) {
@@ -92,35 +91,35 @@ class EducationController extends CustomController
 
     public function datatable()
     {
-        $data = DB::table('education')->where('type','=',request('q'));
+        $data = DB::table('education')->where('type', '=', request('q'));
 
         return DataTables::of($data)
-                         ->addColumn(
-                             'action',
-                             function ($data) {
-                                 $id = $data->id;
-                                 $name = $data->name;
-                                 $description = $data->description;
-                                 $type = $data->type;
-                                 $image = $data->image;
-                                 $schedule = $data->schedule;
-                                 $price = $data->price;
+            ->addColumn(
+                'action',
+                function ($data) {
+                    $id = $data->id;
+                    $name = $data->name;
+                    $description = $data->description;
+                    $type = $data->type;
+                    $image = $data->image;
+                    $schedule = $data->schedule;
+                    $price = $data->price;
 
-                                 $string = 'data-id='.$id;
-                                 $string .= " data-description='$description'";
-                                 $string .= " data-type='$type'";
-                                 $string .= " data-image='$image'";
-                                 if ($data->type <= 3){
-                                    $string .= " data-name='$name'";
-                                    $string .= " data-schedule='$schedule'";
-                                    $string .= " data-price='$price'";
-                                 }
-                                 return "<a type=\"button\" ".$string."
+                    $string = 'data-id=' . $id;
+                    $string .= " data-description='$description'";
+                    $string .= " data-type='$type'";
+                    $string .= " data-image='$image'";
+                    if ($data->type <= 3) {
+                        $string .= " data-name='$name'";
+                        $string .= " data-schedule='$schedule'";
+                        $string .= " data-price='$price'";
+                    }
+                    return "<a type=\"button\" " . $string . "
                                        class=\"editData font-bold cursor-pointer p-2 bg-blue-600 rounded-md text-white transition-all duration-300  hover:bg-blue-400\">Edit</a>
-                                    <a href=\"#\" data-id='".$id."'
+                                    <a href=\"#\" data-id='" . $id . "'
                                        class=\"deleteData font-bold p-2 bg-red-600 rounded-md text-white transition-all duration-300  hover:bg-red-400\">Hapus</a>";
-                             }
-                         )->rawColumns(['action'])->make(true);
+                }
+            )->rawColumns(['action'])->make(true);
     }
 
     public function education_page()
@@ -128,8 +127,8 @@ class EducationController extends CustomController
         $about = About::firstOrFail();
         $educations_offline = Education::where('type', '=', 0)->get();
         $educations_online = Education::where('type', '=', 1)->get();
-        $tax_online = Education::where('type', '=', 2)->get();
-        $tax_offline = Education::where('type', '=', 3)->get();
+        $tax_online = Education::where('type', '=', 3)->get();
+        $tax_offline = Education::where('type', '=', 2)->get();
         $facilities = Education::where('type', '=', 4)->get();
         $benefits = Education::where('type', '=', 5)->get();
         return view('Pendidikan')->with([

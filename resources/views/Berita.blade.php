@@ -23,7 +23,7 @@
                             <div class="flex justify-between w-full">
                                 <p class="text-2xl font-bold">{{ $v->title }}</p>
                                 <div class="text-right">
-                                    <p>{{ \Carbon\Carbon::parse($v->created_at)->format('d F Y H:i') }}</p>
+                                    <p>{{ \Carbon\Carbon::parse($v->date)->format('d F Y H:i') }}</p>
                                     <p>Autor: {{ $v->author }}</p>
 
                                 </div>
@@ -39,7 +39,7 @@
                             <div class="flex justify-between w-full">
                                 <p class="text-2xl font-bold">{{ $v->title }}</p>
                                 <div class="text-right">
-                                    <p>{{ \Carbon\Carbon::parse($v->created_at)->format('d F Y H:i') }}</p>
+                                    <p>{{ \Carbon\Carbon::parse($v->date)->format('d F Y H:i') }}</p>
                                     <p>Autor: {{ $v->author }}</p>
 
                                 </div>
